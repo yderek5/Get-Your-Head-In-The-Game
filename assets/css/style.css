@@ -9,32 +9,42 @@ body {
   margin-top: 50px;
   margin-bottom: 50px;
 }
-
-.imgSize {
-  width: 100px;
-  height: 100px;
-}
 /*NFL TEAMS*/
 .cardinals {
-  background-color: #C40006;
+  background-color: #9E002C;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
+}
+.imgSizeCardinals {
+  width: 100px;
+  height: 100px;
+  background-color: #9E002C;
 }
 .falcons {
-  background-color: #C40006;
+  background-color: #BB0E31;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+.imgSizeFalcons {
+  width: 100px;
+  height: 100px;
+  background-color: #BB0E31;
+}
 .ravens {
-  background-color: #C40006;
+  background-color: #211C79;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
+}
+.imgSizeRavens {
+  width: 100px;
+  height: 100px;
+  background-color: #211C79;
 }
 .bills {
   background-color: #C40006;
@@ -126,6 +136,11 @@ body {
   margin: 0;
   padding: 25px;
   color: #fff;
+}
+.imgSizeChiefs {
+  height: 100px;
+  width: 100px;
+  background-color: #C40006;
 }
 .rams {
   background-color: #C40006;
