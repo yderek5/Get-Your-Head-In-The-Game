@@ -2,10 +2,405 @@ body {
   background-image: url('../images/dark-triangles.png');
   color: #fff;
 }
-
 .gifSize {
   width: 200px;
   height: 200px;
   margin-top: 50px;
   margin-bottom: 50px;
 }
+.margin {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.topText {
+  margin-top: 30px;
+}
+.row {
+  margin-bottom: 3px;
+}
+/*NFL TEAMS*/
+.cardinals {
+  background-color: #9E002C;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeCardinals {
+  width: 100px;
+  height: 100px;
+  background-color: #9E002C;
+}
+.falcons {
+  background-color: #BB0E31;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeFalcons {
+  width: 100px;
+  height: 100px;
+  background-color: #BB0E31;
+}
+.ravens {
+  background-color: #211C79;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeRavens {
+  width: 100px;
+  height: 100px;
+  background-color: #211C79;
+}
+.bills {
+  background-color: #004B8B;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeBills {
+  width: 100px;
+  height: 100px;
+  background-color: #004B8B;
+}
+.panthers {
+  background-color: #0090D5;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizePanthers {
+  width: 100px;
+  height: 100px;
+  background-color: #0090D5;
+}
+.bears {
+  background-color: #001337;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeBears {
+  width: 100px;
+  height: 100px;
+  background-color: #001337;
+}
+.bengals {
+  background-color: #EE4420;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeBengals {
+  width: 100px;
+  height: 100px;
+  background-color: #EE4420;
+}
+.browns {
+  background-color: #ED3820;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeBrowns {
+  width: 100px;
+  height: 100px;
+  background-color: #ED3820;
+}
+.cowboys {
+  background-color: #002551;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeCowboys {
+  width: 100px;
+  height: 100px;
+  background-color: #002551;
+}
+.broncos {
+  background-color: #F05A1F;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeBroncos {
+  width: 100px;
+  height: 100px;
+  background-color: #F05A1F;
+}
+.lions {
+  background-color: #0062A7;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeLions {
+  width: 100px;
+  height: 100px;
+  background-color: #0062A7;
+}
+.packers {
+  background-color: #253B33;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizePackers {
+  width: 100px;
+  height: 100px;
+  background-color: #253B33;
+}
+.texans {
+  background-color: #001337;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeTexans {
+  width: 100px;
+  height: 100px;
+  background-color: #001337;
+}
+.colts {
+  background-color: #00366E;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeColts {
+  width: 100px;
+  height: 100px;
+  background-color: #00366E;
+}
+.jaguars {
+  background-color: #135B6C;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeJaguars {
+  width: 100px;
+  height: 100px;
+  background-color: #135B6C;
+}
+.chiefs {
+  background-color: #C40006;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeChiefs {
+  height: 100px;
+  width: 100px;
+  background-color: #C40006;
+}
+.chargers {
+  background-color: #2E83C0;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeChargers {
+  width: 100px;
+  height: 100px;
+  background-color: #2E83C0;
+}
+.rams {
+  background-color: #132242;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeRams {
+  width: 100px;
+  height: 100px;
+  background-color: #132242;
+}
+.dolphins {
+  background-color: #00818A;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeDolphins {
+  width: 100px;
+  height: 100px;
+  background-color: #00818A;
+}
+.vikings {
+  background-color: #452979;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeVikings {
+  width: 100px;
+  height: 100px;
+  background-color: #452979;
+}
+.patriots {
+  background-color: #0F2143;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizePatriots {
+  width: 100px;
+  height: 100px;
+  background-color: #0F2143;
+}
+.saints {
+  background-color: #000000;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeSaints {
+  width: 100px;
+  height: 100px;
+  background-color: #000000;
+}
+.giants {
+  background-color: #182961;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeGiants {
+  width: 100px;
+  height: 100px;
+  background-color: #182961;
+}
+.jets {
+  background-color: #253B33;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeJets {
+  width: 100px;
+  height: 100px;
+  background-color: #253B33;
+}
+.raiders {
+  background-color: #000000;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeRaiders {
+  width: 100px;
+  height: 100px;
+  background-color: #000000;
+}
+.eagles {
+  background-color: #225257;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeEagles {
+  width: 100px;
+  height: 100px;
+  background-color: #225257;
+}
+.steelers {
+  background-color: #FFBA11;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeSteelers {
+  width: 100px;
+  height: 100px;
+  background-color: #FFBA11;
+}
+.niners {
+  background-color: #C22037;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeNiners {
+  width: 100px;
+  height: 100px;
+  background-color: #C22037;
+}
+.seahawks {
+  background-color: #1E3650;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeSeahawks {
+  width: 100px;
+  height: 100px;
+  background-color: #1E3650;
+}
+.buccaneers {
+  background-color: #CE0A0D;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeBuccaneers {
+  width: 100px;
+  height: 100px;
+  background-color: #CE0A0D;
+}
+.titans {
+  background-color: #388ACB;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeTitans {
+  width: 100px;
+  height: 100px;
+  background-color: #388ACB;
+}
+.redskins {
+  background-color: #5D1912;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeRedskins {
+  width: 100px;
+  height: 100px;
+  background-color: #5D1912;
+}
+/*===============*/
