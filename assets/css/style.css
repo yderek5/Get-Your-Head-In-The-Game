@@ -404,3 +404,365 @@ body {
   background-color: #5D1912;
 }
 /*===============*/
+/*MLB TEAMS*/
+.diamondbacks {
+  background-color: #960022;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeDiamondbacks {
+  width: 100px;
+  height: 100px;
+  background-color: #960022;
+}
+.braves {
+  background-color: #BA0034;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeBraves {
+  width: 100px;
+  height: 100px;
+  background-color: #BA0034;
+}
+.orioles {
+  background-color: #F3340A;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeOrioles {
+  width: 100px;
+  height: 100px;
+  background-color: #F3340A;
+}
+.red-sox {
+  background-color: #B70A27;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeRed-Sox {
+  width: 100px;
+  height: 100px;
+  background-color: #B70A27;
+}
+.white-sox {
+  background-color: #969495;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeWhite-Sox {
+  width: 100px;
+  height: 100px;
+  background-color: #969495;
+}
+.cubs {
+  background-color: #061F58;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeCubs {
+  width: 100px;
+  height: 100px;
+  background-color: #061F58;
+}
+.reds {
+  background-color: #B70018;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeReds {
+  width: 100px;
+  height: 100px;
+  background-color: #B70018;
+}
+.indians {
+  background-color: #000000;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeIndians {
+  width: 100px;
+  height: 100px;
+  background-color: #000000;
+}
+.rockies {
+  background-color: #3B2463;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeRockies {
+  width: 100px;
+  height: 100px;
+  background-color: #3B2463;
+}
+.tigers {
+  background-color: #848283;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeTigers {
+  width: 100px;
+  height: 100px;
+  background-color: #848283;
+}
+.astros {
+  background-color: #E35717;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeAstros {
+  width: 100px;
+  height: 100px;
+  background-color: #E35717;
+}
+.royals {
+  background-color: #083E77;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeRoyals {
+  width: 100px;
+  height: 100px;
+  background-color: #083E77;
+}
+.angels {
+  background-color: #BF0032;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeAngels {
+  width: 100px;
+  height: 100px;
+  background-color: #BF0032;
+}
+.dodgers {
+  background-color: #132437;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeDodgers {
+  width: 100px;
+  height: 100px;
+  background-color: #132437;
+}
+.marlins {
+  background-color: #0C5FA8;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeMarlins {
+  width: 100px;
+  height: 100px;
+  background-color: #0C5FA8;
+}
+.brewers {
+  background-color: #000A3F;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeBrewers {
+  width: 100px;
+  height: 100px;
+  background-color: #000A3F;
+}
+.twins {
+  background-color: #011B49;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeTwins {
+  width: 100px;
+  height: 100px;
+  background-color: #011B49;
+}
+.yankees {
+  background-color: #161D31;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeYankees {
+  width: 100px;
+  height: 100px;
+  background-color: #161D31;
+}
+.mets {
+  background-color: #FC400C;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeMets {
+  width: 100px;
+  height: 100px;
+  background-color: #FC400C;
+}
+.athletics {
+  background-color: #06392C;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeAthletics {
+  width: 100px;
+  height: 100px;
+  background-color: #06392C;
+}
+.phillies {
+  background-color: #1B3287;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizePhillies {
+  width: 100px;
+  height: 100px;
+  background-color: #1B3287;
+}
+.pirates {
+  background-color: #EB2533;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizePirates {
+  width: 100px;
+  height: 100px;
+  background-color: #EB2533;
+}
+.padres {
+  background-color: #162552;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizePadres {
+  width: 100px;
+  height: 100px;
+  background-color: #162552;
+}
+.sanfranGiants {
+  background-color: #CA592E;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeSanfranGiants {
+  width: 100px;
+  height: 100px;
+  background-color: #CA592E;
+}
+.mariners {
+  background-color: #0C2044;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeMariners {
+  width: 100px;
+  height: 100px;
+  background-color: #0C2044;
+}
+.stlCardinals {
+  background-color: #A8061A;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizestlCardinals {
+  width: 100px;
+  height: 100px;
+  background-color: #A8061A;
+}
+.rays {
+  background-color: #61A8E2;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeRays {
+  width: 100px;
+  height: 100px;
+  background-color: #61A8E2;
+}
+.texasRangers {
+  background-color: #B00018;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeTexasRangers {
+  width: 100px;
+  height: 100px;
+  background-color: #B00018;
+}
+.jays {
+  background-color: #0D357D;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeJays {
+  width: 100px;
+  height: 100px;
+  background-color: #0D357D;
+}
+.nationals {
+  background-color: #9A0003;
+  height:100px;
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+.imgSizeNationals {
+  width: 100px;
+  height: 100px;
+  background-color: #9A0003;
+}
+/*===============*/
