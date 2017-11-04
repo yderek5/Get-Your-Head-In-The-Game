@@ -8,14 +8,347 @@
   <!-- Reset CSS -->
   <link rel="stylesheet" href="assets/css/reset.css">
   <!-- Bootstrap CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <!-- Style CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <title>GYHITG | Baseball Teams</title>
+  <title>GYHITG | Football Teams</title>
 </head>
 
 <body>
-
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">GYHITG</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Change League
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="football.html">Football</a>
+            <a class="dropdown-item" href="basketball.html">Basketball</a>
+            <a class="dropdown-item" href="hockey.html">Hockey</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <h1 class="text-center topText">Pick Your Favorite Team</h1>
+  <div class="container margin">
+    <!-- TODO: Add all teams in alphabetical order -->
+    <!-- Team -->
+    <div class="row" data-name="Diamondbacks" data-search="ARI">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/diamondbacks.png" alt="Diamondbacks logo" class="imgSizeDiamondbacks">
+      </div>
+      <div class="col-md-11">
+        <h1 class="diamondbacks">Arizona Diamondbacks</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Braves" data-search="ATL">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/braves.png" alt="Braves logo" class="imgSizeBraves">
+      </div>
+      <div class="col-md-11">
+        <h1 class="braves">Atlanta Braves</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Orioles" data-search="BAL">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/orioles.png" alt="Orioles logo" class="imgSizeOrioles">
+      </div>
+      <div class="col-md-11">
+        <h1 class="orioles">Baltimore Orioles</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Red Sox" data-search="BOS">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/red-sox.png" alt="Red Sox logo" class="imgSizeRed-Sox">
+      </div>
+      <div class="col-md-11">
+        <h1 class="red-sox">Boston Red Sox</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="White Sox" data-search="CWS">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/white-sox.png" alt="White Sox logo" class="imgSizeWhite-Sox">
+      </div>
+      <div class="col-md-11">
+        <h1 class="white-sox">Chicago White Sox</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Cubs" data-search="CHC">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/cubs.png" alt="Cubs logo" class="imgSizeCubs">
+      </div>
+      <div class="col-md-11">
+        <h1 class="cubs">Cleveland Cubs</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Reds" data-search="CIN">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/reds.png" alt="Reds logo" class="imgSizeReds">
+      </div>
+      <div class="col-md-11">
+        <h1 class="reds">Cincinnati Reds</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Indians" data-search="CLE">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/indians.png" alt="Indians logo" class="imgSizeIndians">
+      </div>
+      <div class="col-md-11">
+        <h1 class="indians">Cleveland Indians</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Rockies" data-search="COL">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/rockies.png" alt="Rockies logo" class="imgSizeRockies">
+      </div>
+      <div class="col-md-11">
+        <h1 class="rockies">Colorado Rockies</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Tigers" data-search="DET">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/tigers.png" alt="Tigers logo" class="imgSizeTigers">
+      </div>
+      <div class="col-md-11">
+        <h1 class="tigers">Detroit Tigers</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Astros" data-search="HOU">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/astros.png" alt="Astros logo" class="imgSizeAstros">
+      </div>
+      <div class="col-md-11">
+        <h1 class="astros">Houston Astros</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Royals" data-search="KC">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/royals.png" alt="Royals logo" class="imgSizeRoyals">
+      </div>
+      <div class="col-md-11">
+        <h1 class="royals">Kansas City Royals</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Angels" data-search="LAA">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/angels.png" alt="Angels logo" class="imgSizeAngels">
+      </div>
+      <div class="col-md-11">
+        <h1 class="angels">Los Angeles Angels</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Dodgers" data-search="LAD">
+      <div class="col-md-1">
+        <img class="imgSizeDodgers" src="assets/images/baseball-team-imgs/dodgers.png" alt="Dodgers Logo">
+      </div>
+      <div class="col-md-11">
+        <h1 class="dodgers">Los Angeles Dodgers</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Marlins" data-search="MIA">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/marlins.png" alt="Marlins logo" class="imgSizeMarlins">
+      </div>
+      <div class="col-md-11">
+        <h1 class="marlins">Miami Marlins</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Brewers" data-search="MIL">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/brewers.png" alt="Brewers logo" class="imgSizeBrewers">
+      </div>
+      <div class="col-md-11">
+        <h1 class="brewers">MilWaukee Brewers</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Twins" data-search="MIN">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/twins.png" alt="Twins logo" class="imgSizeTwins">
+      </div>
+      <div class="col-md-11">
+        <h1 class="twins">Minnesota Twins</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Yankees" data-search="NYY">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/yankees.png" alt="Yankees logo" class="imgSizeYankees">
+      </div>
+      <div class="col-md-11">
+        <h1 class="yankees">New York Yankees</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Mets" data-search="NYM">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/mets.png" alt="Mets logo" class="imgSizeMets">
+      </div>
+      <div class="col-md-11">
+        <h1 class="mets">New England Mets</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Athletics" data-search="OAK">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/athletics.png" alt="Athletics logo" class="imgSizeAthletics">
+      </div>
+      <div class="col-md-11">
+        <h1 class="athletics">Oakland Athletics</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Phillies" data-search="PHI">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/phillies.png" alt="Phillies logo" class="imgSizePhillies">
+      </div>
+      <div class="col-md-11">
+        <h1 class="phillies">Philadelphia Phillies</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Pirates" data-search="PIT">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/pirates.png" alt="Pirates logo" class="imgSizePirates">
+      </div>
+      <div class="col-md-11">
+        <h1 class="pirates">Pittsburgh Pirates</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Padres" data-search="SD">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/padres.png" alt="Padres logo" class="imgSizePadres">
+      </div>
+      <div class="col-md-11">
+        <h1 class="padres">San Diego Padres</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="sanfranGiants" data-search="SF">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/sanfranGiants.png" alt="sanfranGiants logo" class="imgSizeSanfranGiants">
+      </div>
+      <div class="col-md-11">
+        <h1 class="sanfranGiants">San Fransisco Giants</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Mariners" data-search="SEA">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/mariners.png" alt="Mariners logo" class="imgSizeMariners">
+      </div>
+      <div class="col-md-11">
+        <h1 class="mariners">Seattle Mariners</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="stlCardinals" data-search="STL">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/stlCardinals.png" alt="stlCardinals logo" class="imgSizestlCardinals">
+      </div>
+      <div class="col-md-11">
+        <h1 class="stlCardinals">St. Louis Cardinals</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Rays" data-search="TB">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/rays.png" alt="Rays logo" class="imgSizeRays">
+      </div>
+      <div class="col-md-11">
+        <h1 class="rays">Tampa Bay Rays</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Rangers" data-search="TEX">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/texasRangers.png" alt="Rangers logo" class="imgSizeTexasRangers">
+      </div>
+      <div class="col-md-11">
+        <h1 class="texasRangers">Tampa Bay Rangers</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Blue Jays" data-search="TOR">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/jays.png" alt="Blue Jays logo" class="imgSizeJays">
+      </div>
+      <div class="col-md-11">
+        <h1 class="jays">Toronto Blue Jays</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- Team -->
+    <div class="row" data-name="Nationals" data-search="WAS">
+      <div class="col-md-1">
+        <img src="assets/images/baseball-team-imgs/nationals.png" alt="Nationals logo" class="imgSizeNationals">
+      </div>
+      <div class="col-md-11">
+        <h1 class="nationals">Washington Nationals</h1>
+      </div>
+    </div>
+    <!-- ************** -->
+  </div>
 </body>
+<!-- JQUERY -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!-- THIS IS FOR THE DROP DOWN MENU -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<!-- ************************************************************************* -->
+<script type="text/javascript" src="assets/javascript/app.js"></script>
 
 </html>
