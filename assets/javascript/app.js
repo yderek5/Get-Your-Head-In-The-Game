@@ -26,6 +26,8 @@ $(document).ready(function(){
           pointsAllowed: result.overallteamstandings.teamstandingsentry[0].stats["PointsAgainst"]["#text"]
         }
 
+          console.log(team.teamRank);
+          console.log(team.pointsScored);
 
         }).fail(function(err) {
             throw err;
