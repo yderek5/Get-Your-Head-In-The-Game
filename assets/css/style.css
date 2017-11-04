@@ -2,23 +2,29 @@ body {
   background-image: url('../images/dark-triangles.png');
   color: #fff;
 }
+
 .gifSize {
   width: 200px;
   height: 200px;
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
 .margin {
   margin-top: 50px;
   margin-bottom: 100px;
 }
+
 .topText {
   margin-top: 30px;
 }
+
 .row {
   margin-bottom: 3px;
 }
+
 /*NFL TEAMS*/
+
 .cardinals {
   background-color: #9E002C;
   height: 100px;
@@ -26,11 +32,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeCardinals {
   width: 100px;
   height: 100px;
   background-color: #9E002C;
 }
+
 .falcons {
   background-color: #BB0E31;
   height: 100px;
@@ -38,11 +46,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeFalcons {
   width: 100px;
   height: 100px;
   background-color: #BB0E31;
 }
+
 .ravens {
   background-color: #211C79;
   height: 100px;
@@ -50,11 +60,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeRavens {
   width: 100px;
   height: 100px;
   background-color: #211C79;
 }
+
 .bills {
   background-color: #004B8B;
   height: 100px;
@@ -62,11 +74,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeBills {
   width: 100px;
   height: 100px;
   background-color: #004B8B;
 }
+
 .panthers {
   background-color: #0090D5;
   height: 100px;
@@ -74,11 +88,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizePanthers {
   width: 100px;
   height: 100px;
   background-color: #0090D5;
 }
+
 .bears {
   background-color: #001337;
   height: 100px;
@@ -86,11 +102,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeBears {
   width: 100px;
   height: 100px;
   background-color: #001337;
 }
+
 .bengals {
   background-color: #EE4420;
   height: 100px;
@@ -98,11 +116,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeBengals {
   width: 100px;
   height: 100px;
   background-color: #EE4420;
 }
+
 .browns {
   background-color: #ED3820;
   height: 100px;
@@ -110,11 +130,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeBrowns {
   width: 100px;
   height: 100px;
   background-color: #ED3820;
 }
+
 .cowboys {
   background-color: #002551;
   height: 100px;
@@ -122,11 +144,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeCowboys {
   width: 100px;
   height: 100px;
   background-color: #002551;
 }
+
 .broncos {
   background-color: #F05A1F;
   height: 100px;
@@ -134,11 +158,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeBroncos {
   width: 100px;
   height: 100px;
   background-color: #F05A1F;
 }
+
 .lions {
   background-color: #0062A7;
   height: 100px;
@@ -146,11 +172,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeLions {
   width: 100px;
   height: 100px;
   background-color: #0062A7;
 }
+
 .packers {
   background-color: #253B33;
   height: 100px;
@@ -158,11 +186,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizePackers {
   width: 100px;
   height: 100px;
   background-color: #253B33;
 }
+
 .texans {
   background-color: #001337;
   height: 100px;
@@ -170,11 +200,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeTexans {
   width: 100px;
   height: 100px;
   background-color: #001337;
 }
+
 .colts {
   background-color: #00366E;
   height: 100px;
@@ -182,11 +214,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeColts {
   width: 100px;
   height: 100px;
   background-color: #00366E;
 }
+
 .jaguars {
   background-color: #135B6C;
   height: 100px;
@@ -194,11 +228,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeJaguars {
   width: 100px;
   height: 100px;
   background-color: #135B6C;
 }
+
 .chiefs {
   background-color: #C40006;
   height: 100px;
@@ -206,11 +242,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeChiefs {
   height: 100px;
   width: 100px;
   background-color: #C40006;
 }
+
 .chargers {
   background-color: #2E83C0;
   height: 100px;
@@ -218,11 +256,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeChargers {
   width: 100px;
   height: 100px;
   background-color: #2E83C0;
 }
+
 .rams {
   background-color: #132242;
   height: 100px;
@@ -230,11 +270,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeRams {
   width: 100px;
   height: 100px;
   background-color: #132242;
 }
+
 .dolphins {
   background-color: #00818A;
   height: 100px;
@@ -242,11 +284,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeDolphins {
   width: 100px;
   height: 100px;
   background-color: #00818A;
 }
+
 .vikings {
   background-color: #452979;
   height: 100px;
@@ -254,11 +298,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeVikings {
   width: 100px;
   height: 100px;
   background-color: #452979;
 }
+
 .patriots {
   background-color: #0F2143;
   height: 100px;
@@ -266,11 +312,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizePatriots {
   width: 100px;
   height: 100px;
   background-color: #0F2143;
 }
+
 .saints {
   background-color: #000000;
   height: 100px;
@@ -278,11 +326,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeSaints {
   width: 100px;
   height: 100px;
   background-color: #000000;
 }
+
 .giants {
   background-color: #182961;
   height: 100px;
@@ -290,11 +340,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeGiants {
   width: 100px;
   height: 100px;
   background-color: #182961;
 }
+
 .jets {
   background-color: #253B33;
   height: 100px;
@@ -302,11 +354,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeJets {
   width: 100px;
   height: 100px;
   background-color: #253B33;
 }
+
 .raiders {
   background-color: #000000;
   height: 100px;
@@ -314,11 +368,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeRaiders {
   width: 100px;
   height: 100px;
   background-color: #000000;
 }
+
 .eagles {
   background-color: #225257;
   height: 100px;
@@ -326,11 +382,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeEagles {
   width: 100px;
   height: 100px;
   background-color: #225257;
 }
+
 .steelers {
   background-color: #FFBA11;
   height: 100px;
@@ -338,11 +396,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeSteelers {
   width: 100px;
   height: 100px;
   background-color: #FFBA11;
 }
+
 .niners {
   background-color: #C22037;
   height: 100px;
@@ -350,11 +410,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeNiners {
   width: 100px;
   height: 100px;
   background-color: #C22037;
 }
+
 .seahawks {
   background-color: #1E3650;
   height: 100px;
@@ -362,11 +424,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeSeahawks {
   width: 100px;
   height: 100px;
   background-color: #1E3650;
 }
+
 .buccaneers {
   background-color: #CE0A0D;
   height: 100px;
@@ -374,11 +438,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeBuccaneers {
   width: 100px;
   height: 100px;
   background-color: #CE0A0D;
 }
+
 .titans {
   background-color: #388ACB;
   height: 100px;
@@ -386,11 +452,13 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeTitans {
   width: 100px;
   height: 100px;
   background-color: #388ACB;
 }
+
 .redskins {
   background-color: #5D1912;
   height: 100px;
@@ -398,869 +466,872 @@ body {
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeRedskins {
   width: 100px;
   height: 100px;
   background-color: #5D1912;
 }
+
 /*===============*/
+
 /*MLB TEAMS*/
+
 .diamondbacks {
   background-color: #960022;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeDiamondbacks {
   width: 100px;
   height: 100px;
   background-color: #960022;
 }
+
 .braves {
   background-color: #BA0034;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeBraves {
   width: 100px;
   height: 100px;
   background-color: #BA0034;
 }
+
 .orioles {
   background-color: #F3340A;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeOrioles {
   width: 100px;
   height: 100px;
   background-color: #F3340A;
 }
+
 .red-sox {
   background-color: #B70A27;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeRed-Sox {
   width: 100px;
   height: 100px;
   background-color: #B70A27;
 }
+
 .white-sox {
   background-color: #969495;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeWhite-Sox {
   width: 100px;
   height: 100px;
   background-color: #969495;
 }
+
 .cubs {
   background-color: #061F58;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeCubs {
   width: 100px;
   height: 100px;
   background-color: #061F58;
 }
+
 .reds {
   background-color: #B70018;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeReds {
   width: 100px;
   height: 100px;
   background-color: #B70018;
 }
+
 .indians {
   background-color: #000000;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeIndians {
   width: 100px;
   height: 100px;
   background-color: #000000;
 }
+
 .rockies {
   background-color: #3B2463;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeRockies {
   width: 100px;
   height: 100px;
   background-color: #3B2463;
 }
+
 .tigers {
   background-color: #848283;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeTigers {
   width: 100px;
   height: 100px;
   background-color: #848283;
 }
+
 .astros {
   background-color: #E35717;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeAstros {
   width: 100px;
   height: 100px;
   background-color: #E35717;
 }
+
 .royals {
   background-color: #083E77;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeRoyals {
   width: 100px;
   height: 100px;
   background-color: #083E77;
 }
+
 .angels {
   background-color: #BF0032;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeAngels {
   width: 100px;
   height: 100px;
   background-color: #BF0032;
 }
+
 .dodgers {
   background-color: #132437;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeDodgers {
   width: 100px;
   height: 100px;
   background-color: #132437;
 }
+
 .marlins {
   background-color: #0C5FA8;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeMarlins {
   width: 100px;
   height: 100px;
   background-color: #0C5FA8;
 }
+
 .brewers {
   background-color: #000A3F;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeBrewers {
   width: 100px;
   height: 100px;
   background-color: #000A3F;
 }
+
 .twins {
   background-color: #011B49;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeTwins {
   width: 100px;
   height: 100px;
   background-color: #011B49;
 }
+
 .yankees {
   background-color: #161D31;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeYankees {
   width: 100px;
   height: 100px;
   background-color: #161D31;
 }
+
 .mets {
   background-color: #FC400C;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeMets {
   width: 100px;
   height: 100px;
   background-color: #FC400C;
 }
+
 .athletics {
   background-color: #06392C;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeAthletics {
   width: 100px;
   height: 100px;
   background-color: #06392C;
 }
+
 .phillies {
   background-color: #1B3287;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizePhillies {
   width: 100px;
+
   height: 100px;
   background-color: #1B3287;
 }
+
 .pirates {
   background-color: #EB2533;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizePirates {
   width: 100px;
   height: 100px;
   background-color: #EB2533;
 }
+
 .padres {
   background-color: #162552;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizePadres {
   width: 100px;
   height: 100px;
   background-color: #162552;
 }
+
 .sanfranGiants {
   background-color: #CA592E;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeSanfranGiants {
   width: 100px;
   height: 100px;
   background-color: #CA592E;
 }
+
 .mariners {
   background-color: #0C2044;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeMariners {
   width: 100px;
   height: 100px;
   background-color: #0C2044;
 }
+
 .stlCardinals {
   background-color: #A8061A;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizestlCardinals {
   width: 100px;
   height: 100px;
   background-color: #A8061A;
 }
+
 .rays {
   background-color: #61A8E2;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeRays {
   width: 100px;
   height: 100px;
   background-color: #61A8E2;
 }
+
 .texasRangers {
   background-color: #B00018;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeTexasRangers {
   width: 100px;
   height: 100px;
   background-color: #B00018;
 }
+
 .jays {
   background-color: #0D357D;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeJays {
   width: 100px;
   height: 100px;
   background-color: #0D357D;
 }
+
 .nationals {
   background-color: #9A0003;
-  height:100px;
+  height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
 }
+
 .imgSizeNationals {
   width: 100px;
   height: 100px;
   background-color: #9A0003;
 }
+
 /*===============*/
+
 /*=============== Hockey */
 
 .carolina_hurricanes {
-  background-color: #5D1912;
+  background-color: #1A1718;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-
 }
 
 .imgSizeCarolina_hurricanes {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #1A1718;
 }
 
 .colblujak {
-  background-color: #5D1912;
+  background-color: #011C4B;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizeCol_blu_jak {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #011C4B;
 }
 
 .njdevils {
-  background-color: #5D1912;
+  background-color: #C2001A;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizejerseydevils {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #C2001A;
 }
 
 .nyislanders {
-  background-color: #5D1912;
+  background-color: #063F89;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizenyislanders {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #063F89;
 }
 
 .nyRangers {
-  background-color: #5D1912;
+  background-color: #969495;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizenyRangers {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #969495;
 }
 
 .phillyFliers {
-  background-color: #5D1912;
+  background-color: #EF6330;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizePhillyFlyers {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #EF6330;
 }
 
 .pittsPenguins {
-  background-color: #5D1912;
+  background-color: #FDAB09;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizepittsPenguins {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #FDAB09;
 }
 
 .washCapitals {
-  background-color: #5D1912;
+  background-color: #848283;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizewashCapitals {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #848283;
 }
 
 .bostBruins {
-  background-color: #5D1912;
+  background-color: #FAA90F;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizebostBruins {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #FAA90F;
 }
 
 .buffSabres {
-  background-color: #5D1912;
+  background-color: #011742;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizebuffSabres {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #011742;
 }
 
 .detroitWings {
-  background-color: #5D1912;
+  background-color: #E4001C;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizedetroitWings {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #E4001C;
 }
 
 .floridaPanthers {
-  background-color: #5D1912;
+  background-color: #011131;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizefloridaPanthers {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #011131;
 }
 
 .montCanada {
-  background-color: #5D1912;
+  background-color: #9F001F;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizemontCanada {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #9F001F;
 }
 
 .ottSenators {
-  background-color: #5D1912;
+  background-color: #C2001A;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizeottSenators {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #C2001A;
 }
 
 .tampaLight {
-  background-color: #5D1912;
+  background-color: #032D6B;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizetampaLight {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #032D6B;
 }
 
 .torontoLeafs {
-  background-color: #5D1912;
+  background-color: #001148;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizetorontoLeafs {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #001148;
 }
 
 .chicagoBlack {
-  background-color: #5D1912;
+  background-color: #E09A0D;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizechicagoBlack {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #E09A0D;
 }
 
 .colAvalanche {
-  background-color: #5D1912;
+  background-color: #5B152D;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizecolAvalanche {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #5B152D;
 }
 
 .dalStars {
-  background-color: #5D1912;
+  background-color: #11603B;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizedalStars {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #11603B;
 }
 
 .minWild {
-  background-color: #5D1912;
+  background-color: #084023;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizeminWild {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #084023;
 }
 
 .nashPred {
-  background-color: #5D1912;
+  background-color: #FDAC14;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizenashPred {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #FDAC14;
 }
 
 .louisBlues {
-  background-color: #5D1912;
+  background-color: #012584;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizelouisBlues {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #012584;
 }
 
 .winJets {
-  background-color: #5D1912;
+  background-color: #011130;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizewinJets {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #011130;
 }
 
 .annaDucks {
-  background-color: #5D1912;
+  background-color: #DF3908;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizeannaDucks {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #DF3908;
 }
 
 .arizonaCoy {
-  background-color: #5D1912;
+  background-color: #ECE0B9;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizearizonaCoy {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #ECE0B9;
 }
 
 .calgaryFlames {
-  background-color: #5D1912;
+  background-color: #C2001A;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizecalgaryFlames {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #C2001A;
 }
 
 .oilers {
-  background-color: #5D1912;
+  background-color: #022863;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizeoilers {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #022863;
 }
 
 .laKings {
-  background-color: #5D1912;
+  background-color: #8E939B;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizelaKings {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #8E939B;
 }
 
 .sanJose {
-  background-color: #5D1912;
+  background-color: #127484;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizesanJose {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #127484;
 }
 
 .vanCan {
-  background-color: #5D1912;
+  background-color: #022441;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizevanCan {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #022441;
 }
 
 .vegas {
-  background-color: #5D1912;
+  background-color: #D10026;
   height: 100px;
   margin: 0;
   padding: 25px;
   color: #fff;
-  
 }
 
 .imgSizevegas {
   width: 100px;
   height: 100px;
-  background-color: #5D1912;
-
+  background-color: #D10026;
 }
-
