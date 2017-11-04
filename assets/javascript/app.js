@@ -1,3 +1,4 @@
+
 var baseUrl = "https://api.mysportsfeeds.com/v1.1/pull/nfl/2017-regular/overall_team_standings.json?teamstats=W,L,T,PF,PA&team="
 var rosterUrl = "https://api.mysportsfeeds.com/v1.1/pull/nfl/2017-regular/roster_players.json?fordate=20171001&team=";
 var bigRoster = [];
@@ -56,6 +57,7 @@ $(document).ready(function(){
             throw err;
         }); //end of fail
 
+
 //get a single player info: https://api.mysportsfeeds.com/v1.1/pull/nfl/2017-regular/cumulative_player_stats.json?playerstats=Att,Comp,Yds,TD&team=ABBREVIATION&player=FirstName-LastName
 
        $.ajax({
@@ -86,5 +88,6 @@ $(document).ready(function(){
 });//endof document.ready
 
   
+
 
 
