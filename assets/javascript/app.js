@@ -1,5 +1,5 @@
 
-var baseUrl = "https://api.mysportsfeeds.com/v1.1/pull/nfl/2017-regular/overall_team_standings.json?teamstats=W,L,T,PF,PA&team="
+var baseUrl = "https://api.mysportsfeeds.com/v1.1/pull/nfl/2017-regular/overall_team_standings.json?teamstats=W,L,T,PF,PA&team=";
 var rosterUrl = "https://api.mysportsfeeds.com/v1.1/pull/nfl/2017-regular/roster_players.json?fordate=20171001&team=";
 
 $(document).ready(function(){
@@ -34,7 +34,3 @@ $(document).ready(function(){
         }); //end of fail
       }); //end of onclick
   });//endof document.ready
-
-  
-
-
