@@ -38,8 +38,8 @@
       </ul>
     </div>
   </nav>
-  <h1 class="text-center topText">Pick Your Favorite Team</h1>
-  <div class="container margin">
+  <h1 class="text-center topText contain1">Pick Your Favorite Team</h1>
+  <div class="container margin contain1">
     <!-- TODO: Add all teams in alphabetical order -->
     <!-- Team -->
     <div class="row" data-name="Cardinals" data-search="ARI">
@@ -362,6 +362,44 @@
     </div>
     <!-- ************** -->
   </div>
+
+
+<!-- tsa ADDED LINES BELOW FOR DISPLAY OF TEAM CLICKED INFO -->
+
+<div class="container contain2" style="display: none;">
+
+  <div class="row" style="margin: 5px 5px 15px;">
+
+    <div class="col-md-4 tsa" id="teamStats" style="border: inset 5px gray; background-color: #3366C1;"> </div>
+    <div class="col-md-4 tsa" style="border: inset 5px gray; text-align: center; background-color: #3366C1;"><h1>Back to Teams</h1></div>
+    <div class="col-md-4 tsa"  style="border: inset 5px gray; text-align: center; background-color: #3366C1;">Stadium Image</div>
+
+  </div>
+
+<div class="row">
+
+      <div class="col-md-12">
+              <table class="table" style="border: 5px inset gray;">
+                  <thead>
+                    <tr>
+                      <th>Player Name</th>
+                      <th>Jersey Number</th>
+                      <th>Height</th>
+                      <th>Weight</th>  
+                      <th>Age</th>                                                                
+                      <th>Rookie Status</th>
+                      <th>Position</th>
+                    </tr>
+                  </thead>
+                  <tbody id="players">
+                   
+                  </tbody>
+                </table>
+              </div>
+  </div>
+</div>
+
+
 </body>
 <!-- JQUERY -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>

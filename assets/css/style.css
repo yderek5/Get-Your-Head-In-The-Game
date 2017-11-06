@@ -2,6 +2,16 @@ body {
   background-image: url('../images/dark-triangles.png');
   color: #fff;
 }
+
+p {
+  font-size: 18px;
+}
+
+td {
+  border: 1px gray outset;
+  background-color: #3366C1;
+}
+
 .gifSize {
   width: 200px;
   height: 200px;
