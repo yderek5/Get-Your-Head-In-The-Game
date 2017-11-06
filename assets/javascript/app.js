@@ -1,24 +1,22 @@
 
 var baseUrl = "https://api.mysportsfeeds.com/v1.1/pull/nfl/2017-regular/overall_team_standings.json?teamstats=W,L,T,PF,PA&team="
-var rosterUrl = "https://api.mysportsfeeds.com/v1.1/pull/nfl/2017-regular/roster_players.json?fordate=20171001&team=";
+var rosterUrl = "https://api.mysportsfeeds.com/v1.1/pull/nfl/2017-regular/roster_players.json?fordate=20171101&team=";
 var bigRoster = [];
+
 
 $(document).ready(function(){
 
-    var fromStorage = (localStorage.getItem("nfl-teamname"));
-    console.log(fromStorage)
+ var fromStorage = (localStorage.getItem("nfl-teamname"));
 
   $(".row").on("click", function(event){
+
     var newBaseUrl = baseUrl + $(this).attr("data-search");
     var newRosterUrl = rosterUrl + $(this).attr("data-search");
-    console.log(newRosterUrl);
+
     $("#teamStats").empty();
     $("#players").empty();
 
     localStorage.setItem("nfl-teamname", $(this).attr("data-search")); //key and value  
-
-        $("#whatever").css("display", "none");
-        $("#whatever2").css("display", "inline");
 
        $.ajax({
         url: newBaseUrl,
@@ -43,24 +41,26 @@ $(document).ready(function(){
         //console.log(team.teamCity);
         //console.log(team.teamName);        
 
-        var putStats =  "<p>Team Rank: " + team.teamRank + "<br>"
+        var putStats =  "<p>Name: " + team.teamName + "<br>"
+            putStats += "Team Rank: " + team.teamRank + "<br>"
             putStats += "Games Played: " + team.gamesPlayed + "<br>"
             putStats += "Wins: " + team.gamesWon + "<br>"
             putStats += "Losses: " + team.gamesLost + "<br>"
             putStats += "Ties: " + team.gamesTied + "<br>"
             putStats += "Points Scored: " + team.pointsScored + "<br>"            
             putStats += "Points Allowed: " + team.pointsAllowed + "</p>"            
+            console.log(putStats)
             $("#teamStats").append(putStats)
+//debugger
+
 
         showMap(team.teamCity + ' ' + team.teamName);
 
         //debugger
+
         }).fail(function(err) {
             throw err;
         }); //end of fail
-
-
-//get a single player info: https://api.mysportsfeeds.com/v1.1/pull/nfl/2017-regular/cumulative_player_stats.json?playerstats=Att,Comp,Yds,TD&team=ABBREVIATION&player=FirstName-LastName
 
        $.ajax({
         url: newRosterUrl,
@@ -69,22 +69,44 @@ $(document).ready(function(){
             xhr.setRequestHeader('Authorization', 'Basic S1VDb2Rpbmc6ZGx0YUBrdQ==');
           }
         }).done(function(result2) {
-          console.log(result2);
 
           var bigRoster = result2.rosterplayers.playerentry;
-          console.log(bigRoster)
 
             for (var i = 0; i < bigRoster.length; i++) {
-              //console.log(bigRoster[i].player.FirstName + " " + bigRoster[i].player.LastName + " #" + bigRoster[i].player.JerseyNumber);
-               if (bigRoster[i].player.JerseyNumber !== undefined) {
-                  var playerButtons = "<button>" + bigRoster[i].player.FirstName + " " + bigRoster[i].player.LastName + " #" + bigRoster[i].player.JerseyNumber + "</button>"
-                  $("#players").append(playerButtons)
+
+               if ((bigRoster[i].player.JerseyNumber !== undefined) && (bigRoster[i].player["Position"] !== undefined)) {
+
+                  var playerInfo = "<tr>"
+                     playerInfo += "<td>" + bigRoster[i].player.FirstName + " " + bigRoster[i].player.LastName + "</td>";
+                     playerInfo += "<td>" + bigRoster[i].player.JerseyNumber + "</td>";
+                     playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Height"] + "</td>";
+                     playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Weight"] + "</td>";                     
+
+                        if (result2.rosterplayers.playerentry[i].player["Age"] !== undefined) {
+                                   playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Age"] + "</td>";                                          
+                        } else {
+                                   playerInfo += "<td>Not Listed</td>";                                          
+                        }
+
+                        if (result2.rosterplayers.playerentry[i].player["IsRookie"] !== "false") {
+                                   playerInfo += "<td>Veteran</td>";                                          
+                        } else {
+                                   playerInfo += "<td>Rookie</td>";                                          
+                        }
+
+                     playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Position"] + "</td></tr>";                                          
+                     $("tbody").append(playerInfo);
                }
             }
+
         //debugger
+
         }).fail(function(err) {
             throw err;
         }); //end of fail
+
+       $(".contain1").toggle(); //.css("display", "none");
+       $(".contain2").toggle(); //.css("display", "inline");
 
   }); //end of onclick
 });//endof document.ready

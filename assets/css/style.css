@@ -3,7 +3,15 @@ body {
   color: #fff;
 }
 
-.mapHeight {
+p {
+  font-size: 18px;
+}
+
+td {
+  border: 1px gray outset;
+  background-color: #3366C1;
+}
+  .mapHeight {
   height:400px;
 }
 
