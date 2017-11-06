@@ -6,109 +6,128 @@ var bigRoster = [];
 
 $(document).ready(function(){
 
- var fromStorage = (localStorage.getItem("nfl-teamname"));
+  
 
-  $(".row").on("click", function(event){
+     var fromStorage = (localStorage.getItem("nfl-teamname"));
 
-    var newBaseUrl = baseUrl + $(this).attr("data-search");
-    var newRosterUrl = rosterUrl + $(this).attr("data-search");
+      $(".row").on("click", function(event){
 
-    $("#teamStats").empty();
-    $("#players").empty();
+        if($(this).parent().attr('id') == 'contain1'){
 
-    localStorage.setItem("nfl-teamname", $(this).attr("data-search")); //key and value
+        var newBaseUrl = baseUrl + $(this).attr("data-search");
+        var newRosterUrl = rosterUrl + $(this).attr("data-search");
 
-       $.ajax({
-        url: newBaseUrl,
-        method: 'GET',
-          beforeSend: function (xhr) {
-            xhr.setRequestHeader('Authorization', 'Basic S1VDb2Rpbmc6ZGx0YUBrdQ==');
-          }
-        }).done(function(result) {
+        $("#teamStats").empty();
+        $("#players").empty();
 
-          var team = {
-          teamRank: result.overallteamstandings.teamstandingsentry[0].rank,
-          gamesPlayed: result.overallteamstandings.teamstandingsentry[0].stats["GamesPlayed"]["#text"],
-          gamesWon: result.overallteamstandings.teamstandingsentry[0].stats["Wins"]["#text"],
-          gamesLost: result.overallteamstandings.teamstandingsentry[0].stats["Losses"]["#text"],
-          gamesTied: result.overallteamstandings.teamstandingsentry[0].stats["Ties"]["#text"],
-          pointsScored: result.overallteamstandings.teamstandingsentry[0].stats["PointsFor"]["#text"],
-          pointsAllowed: result.overallteamstandings.teamstandingsentry[0].stats["PointsAgainst"]["#text"],
-          teamCity: result.overallteamstandings.teamstandingsentry[0]["team"]["City"],
-          teamName: result.overallteamstandings.teamstandingsentry[0]["team"]["Name"]
-        };
+        localStorage.setItem("nfl-teamname", $(this).attr("data-search")); //key and value
 
-        //console.log(team.teamCity);
-        //console.log(team.teamName);
+           $.ajax({
+            url: newBaseUrl,
+            method: 'GET',
+              beforeSend: function (xhr) {
+                xhr.setRequestHeader('Authorization', 'Basic S1VDb2Rpbmc6ZGx0YUBrdQ==');
+              }
+            }).done(function(result) {
 
-        var putStats =  "<p>Name: " + team.teamName + "<br>";
-            putStats += "Team Rank: " + team.teamRank + "<br>";
-            putStats += "Games Played: " + team.gamesPlayed + "<br>";
-            putStats += "Wins: " + team.gamesWon + "<br>";
-            putStats += "Losses: " + team.gamesLost + "<br>";
-            putStats += "Ties: " + team.gamesTied + "<br>";
-            putStats += "Points Scored: " + team.pointsScored + "<br>";
-            putStats += "Points Allowed: " + team.pointsAllowed + "</p>";
-            console.log(putStats);
-            $("#teamStats").append(putStats);
-//debugger
+              var team = {
+              teamRank: result.overallteamstandings.teamstandingsentry[0].rank,
+              gamesPlayed: result.overallteamstandings.teamstandingsentry[0].stats["GamesPlayed"]["#text"],
+              gamesWon: result.overallteamstandings.teamstandingsentry[0].stats["Wins"]["#text"],
+              gamesLost: result.overallteamstandings.teamstandingsentry[0].stats["Losses"]["#text"],
+              gamesTied: result.overallteamstandings.teamstandingsentry[0].stats["Ties"]["#text"],
+              pointsScored: result.overallteamstandings.teamstandingsentry[0].stats["PointsFor"]["#text"],
+              pointsAllowed: result.overallteamstandings.teamstandingsentry[0].stats["PointsAgainst"]["#text"],
+              teamCity: result.overallteamstandings.teamstandingsentry[0]["team"]["City"],
+              teamName: result.overallteamstandings.teamstandingsentry[0]["team"]["Name"]
+            };
+
+            //console.log(team.teamCity);
+            //console.log(team.teamName);
+
+            var putStats =  "<p>Name: " + team.teamName + "<br>";
+                putStats += "Team Rank: " + team.teamRank + "<br>";
+                putStats += "Games Played: " + team.gamesPlayed + "<br>";
+                putStats += "Wins: " + team.gamesWon + "<br>";
+                putStats += "Losses: " + team.gamesLost + "<br>";
+                putStats += "Ties: " + team.gamesTied + "<br>";
+                putStats += "Points Scored: " + team.pointsScored + "<br>";
+                putStats += "Points Allowed: " + team.pointsAllowed + "</p>";
+                console.log(putStats);
+                $("#teamStats").append(putStats);
+    //debugger
 
 
-        showMap(team.teamCity + ' ' + team.teamName);
+            showMap(team.teamCity + ' ' + team.teamName);
 
-        //debugger
+            //debugger
 
-        }).fail(function(err) {
-            throw err;
-        }); //end of fail
+            }).fail(function(err) {
+                throw err;
+            }); //end of fail
 
-       $.ajax({
-        url: newRosterUrl,
-        method: 'GET',
-          beforeSend: function (xhr) {
-            xhr.setRequestHeader('Authorization', 'Basic S1VDb2Rpbmc6ZGx0YUBrdQ==');
-          }
-        }).done(function(result2) {
+           $.ajax({
+            url: newRosterUrl,
+            method: 'GET',
+              beforeSend: function (xhr) {
+                xhr.setRequestHeader('Authorization', 'Basic S1VDb2Rpbmc6ZGx0YUBrdQ==');
+              }
+            }).done(function(result2) {
 
-          var bigRoster = result2.rosterplayers.playerentry;
+              var bigRoster = result2.rosterplayers.playerentry;
 
-            for (var i = 0; i < bigRoster.length; i++) {
+                for (var i = 0; i < bigRoster.length; i++) {
 
-               if ((bigRoster[i].player.JerseyNumber !== undefined) && (bigRoster[i].player["Position"] !== undefined)) {
+                   if ((bigRoster[i].player.JerseyNumber !== undefined) && (bigRoster[i].player["Position"] !== undefined)) {
 
-                  var playerInfo = "<tr>";
-                     playerInfo += "<td>" + bigRoster[i].player.FirstName + " " + bigRoster[i].player.LastName + "</td>";
-                     playerInfo += "<td>" + bigRoster[i].player.JerseyNumber + "</td>";
-                     playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Height"] + "</td>";
-                     playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Weight"] + "</td>";
+                      var playerInfo = "<tr>";
+                         playerInfo += "<td>" + bigRoster[i].player.FirstName + " " + bigRoster[i].player.LastName + "</td>";
+                         playerInfo += "<td>" + bigRoster[i].player.JerseyNumber + "</td>";
+                         playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Height"] + "</td>";
+                         playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Weight"] + "</td>";
 
-                        if (result2.rosterplayers.playerentry[i].player["Age"] !== undefined) {
-                                   playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Age"] + "</td>";
-                        } else {
-                                   playerInfo += "<td>Not Listed</td>";
-                        }
+                            if (result2.rosterplayers.playerentry[i].player["Age"] !== undefined) {
+                                       playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Age"] + "</td>";
+                            } else {
+                                       playerInfo += "<td>Not Listed</td>";
+                            }
 
-                        if (result2.rosterplayers.playerentry[i].player["IsRookie"] !== "false") {
-                                   playerInfo += "<td>Veteran</td>";
-                        } else {
-                                   playerInfo += "<td>Rookie</td>";
-                        }
+                            if (result2.rosterplayers.playerentry[i].player["IsRookie"] !== "false") {
+                                       playerInfo += "<td>Veteran</td>";
+                            } else {
+                                       playerInfo += "<td>Rookie</td>";
+                            }
 
-                     playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Position"] + "</td></tr>";
-                     $("tbody").append(playerInfo);
-               }
-            }
+                         playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Position"] + "</td></tr>";
+                         $("tbody").append(playerInfo);
+                   }
+                }
 
-        //debugger
+            //debugger
 
-        }).fail(function(err) {
-            throw err;
-        }); //end of fail
+            }).fail(function(err) {
+                throw err;
+            }); //end of fail
 
-       $(".contain1").toggle(); //.css("display", "none");
-       $(".contain2").toggle(); //.css("display", "inline");
+
+
+            console.log($(this).parent().attr('id'));
+
+
+         
+           $(".contain1").toggle(); //.css("display", "none");
+           $(".contain2").toggle(); //.css("display", "inline");
+      }//end IF statement 
+
+
 
   }); //end of onclick
+
+  $("#backToTeams").on("click", function(event){
+    $(".contain1").toggle(); //.css("display", "none");
+    $(".contain2").toggle(); //.css("display", "inline");
+
+  })
 });//endof document.ready
 
 
