@@ -40,8 +40,8 @@ $(document).ready(function(){
           teamName: result.overallteamstandings.teamstandingsentry[0]["team"]["Name"]
         };
 
-        console.log(team.teamCity);
-        console.log(team.teamName);        
+        //console.log(team.teamCity);
+        //console.log(team.teamName);        
 
         var putStats =  "<p>Team Rank: " + team.teamRank + "<br>"
             putStats += "Games Played: " + team.gamesPlayed + "<br>"
@@ -52,7 +52,9 @@ $(document).ready(function(){
             putStats += "Points Allowed: " + team.pointsAllowed + "</p>"            
             $("#teamStats").append(putStats)
 
-        debugger
+        showMap(team.teamCity + ' ' + team.teamName);
+
+        //debugger
         }).fail(function(err) {
             throw err;
         }); //end of fail
@@ -79,7 +81,7 @@ $(document).ready(function(){
                   $("#players").append(playerButtons)
                }
             }
-        debugger
+        //debugger
         }).fail(function(err) {
             throw err;
         }); //end of fail
@@ -88,6 +90,36 @@ $(document).ready(function(){
 });//endof document.ready
 
   
+var showMap = function(teamName) {
 
+      var geoCoder = new google.maps.Geocoder();
+      var address = teamName + " Stadium";
+      var map;
+      var service;
+      var infowindow;
+      var geoCoder;
+      var test;
+      var mapCenter;
+      $("#map").addClass('mapHeight');
+      //console.log(address);
+        geocoder = new google.maps.Geocoder();
+         geocoder.geocode( { 'address': address}, function(results, status) {
+          //console.log(status);
+          if (status == 'OK') {
+            mapCenter = results[0].geometry.location;
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: mapCenter,
+                zoom: 18,
+                mapTypeId: "hybrid"
+            });
+            var marker = new google.maps.Marker({
+                map: map,
+                position: mapCenter
+            });
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+}
 
 

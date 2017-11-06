@@ -3,6 +3,10 @@ body {
   color: #fff;
 }
 
+.mapHeight {
+  height:400px;
+}
+
 .gifSize {
   width: 200px;
   height: 200px;
