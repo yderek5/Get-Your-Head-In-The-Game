@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <!-- Style CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADmrqNNdZqhI7jfWguW-nj75hepeXasAA&libraries=places"></script>
   <title>GYHITG | Football Teams</title>
 </head>
 
@@ -38,11 +39,11 @@
       </ul>
     </div>
   </nav>
-  <h1 class="text-center topText">Pick Your Favorite Team</h1>
-  <div class="container margin">
+  <h1 class="text-center topText contain1">Pick Your Favorite Team</h1>
+  <div class="container margin contain1" id="contain1">
     <!-- TODO: Add all teams in alphabetical order -->
     <!-- Team -->
-    <div class="row" data-name="Cardinals">
+    <div class="row" data-name="Cardinals" data-search="ARI">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/cardinals.png" alt="Cardinals logo" class="imgSizeCardinals">
       </div>
@@ -52,7 +53,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Falcons">
+    <div class="row" data-name="Falcons" data-search="ATL">
       <div class="col-md-1">
         <img class="imgSizeFalcons" src="assets/images/football-team-imgs/falcons.png" alt="Falcons logo">
       </div>
@@ -62,7 +63,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Ravens">
+    <div class="row" data-name="Ravens" data-search="BAL">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/ravens.png" alt="Ravens logo" class="imgSizeRavens">
       </div>
@@ -72,7 +73,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Bills">
+    <div class="row" data-name="Bills" data-search="BUF">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/bills.png" alt="B" class="imgSizeBills">
       </div>
@@ -82,7 +83,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Panthers">
+    <div class="row" data-name="Panthers"  data-search="CAR">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/panthers.png" alt="Panthers logo" class="imgSizePanthers">
       </div>
@@ -92,7 +93,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Bears">
+    <div class="row" data-name="Bears" data-search="CHI">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/bears.png" alt="Bears logo" class="imgSizeBears">
       </div>
@@ -102,7 +103,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Bengals">
+    <div class="row" data-name="Bengals" data-search="CIN">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/bengals.png" alt="Bengals logo" class="imgSizeBengals">
       </div>
@@ -112,7 +113,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Browns">
+    <div class="row" data-name="Browns" data-search="CLE">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/browns.png" alt="Browns logo" class="imgSizeBrowns">
       </div>
@@ -122,7 +123,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Cowboys">
+    <div class="row" data-name="Cowboys" data-search="DAL">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/cowboys.png" alt="Cowboys logo" class="imgSizeCowboys">
       </div>
@@ -132,7 +133,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Broncos">
+    <div class="row" data-name="Broncos"  data-search="DEN">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/broncos.png" alt="Broncos logo" class="imgSizeBroncos">
       </div>
@@ -142,7 +143,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Lions">
+    <div class="row" data-name="Lions" data-search="DET">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/lions.png" alt="Lions logo" class="imgSizeLions">
       </div>
@@ -152,7 +153,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Packers">
+    <div class="row" data-name="Packers"  data-search="GB">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/packers.png" alt="Packers logo" class="imgSizePackers">
       </div>
@@ -162,7 +163,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Texans">
+    <div class="row" data-name="Texans"  data-search="HOU">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/texans.png" alt="Texans logo" class="imgSizeTexans">
       </div>
@@ -172,7 +173,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Colts">
+    <div class="row" data-name="Colts" data-search="IND">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/colts.png" alt="Colts logo" class="imgSizeColts">
       </div>
@@ -182,7 +183,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Jaguars">
+    <div class="row" data-name="Jaguars"  data-search="JAX">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/jaguars.png" alt="Jaguars logo" class="imgSizeJaguars">
       </div>
@@ -192,7 +193,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Chiefs">
+    <div class="row" data-name="Chiefs"  data-search="KC">
       <div class="col-md-1">
         <img class="imgSizeChiefs" src="assets/images/football-team-imgs/chiefs.png" alt="Chiefs Logo">
       </div>
@@ -202,7 +203,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Chargers">
+    <div class="row" data-name="Chargers" data-search="LAC">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/chargers.png" alt="Chargers logo" class="imgSizeChargers">
       </div>
@@ -212,7 +213,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name=Rams>
+    <div class="row" data-name="Rams"  data-search="LA">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/rams.png" alt="Rams logo" class="imgSizeRams">
       </div>
@@ -222,7 +223,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Dolphins">
+    <div class="row" data-name="Dolphins" data-search="MIA">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/dolphins.png" alt="Dolphins logo" class="imgSizeDolphins">
       </div>
@@ -232,7 +233,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Vikings">
+    <div class="row" data-name="Vikings" data-search="MIN">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/vikings.png" alt="Vikings logo" class="imgSizeVikings">
       </div>
@@ -242,7 +243,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Patriots">
+    <div class="row" data-name="Patriots" data-search="NE">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/patriots.png" alt="Patriots logo" class="imgSizePatriots">
       </div>
@@ -252,7 +253,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Saints">
+    <div class="row" data-name="Saints"  data-search="NO">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/saints.png" alt="Saints logo" class="imgSizeSaints">
       </div>
@@ -262,7 +263,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Giants">
+    <div class="row" data-name="Giants"  data-search="NYG">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/giants.png" alt="Giants logo" class="imgSizeGiants">
       </div>
@@ -272,7 +273,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Jets">
+    <div class="row" data-name="Jets" data-search="NYJ">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/jets.png" alt="Jets logo" class="imgSizeJets">
       </div>
@@ -282,7 +283,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Raiders">
+    <div class="row" data-name="Raiders" data-search="OAK">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/raiders.png" alt="Raiders logo" class="imgSizeRaiders">
       </div>
@@ -292,7 +293,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Eagles">
+    <div class="row" data-name="Eagles" data-search="PHI">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/eagles.png" alt="Eagles logo" class="imgSizeEagles">
       </div>
@@ -302,7 +303,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Steelers">
+    <div class="row" data-name="Steelers" data-search="PIT">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/steelers.png" alt="Steelers logo" class="imgSizeSteelers">
       </div>
@@ -312,17 +313,17 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="49ers">
+    <div class="row" data-name="49ers" data-search="SF">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/49ers.png" alt="49ers logo" class="imgSizeNiners">
       </div>
       <div class="col-md-11">
-        <h1 class="niners">San Fransisco 49ers</h1>
+        <h1 class="niners">San Francisco 49ers</h1>
       </div>
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name=Seahawks>
+    <div class="row" data-name="Seahawks"  data-search="SEA">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/seahawks.svg" alt="Seahawks logo" class="imgSizeSeahawks">
       </div>
@@ -332,7 +333,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Buccaneers">
+    <div class="row" data-name="Buccaneers" data-search="TB">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/buccaneers.png" alt="Buccaneers logo" class="imgSizeBuccaneers">
       </div>
@@ -342,7 +343,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Titans">
+    <div class="row" data-name="Titans" data-search="TEN">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/titans.png" alt="Titans logo" class="imgSizeTitans">
       </div>
@@ -352,7 +353,7 @@
     </div>
     <!-- ************** -->
     <!-- Team -->
-    <div class="row" data-name="Redskins">
+    <div class="row" data-name="Redskins" data-search="WAS">
       <div class="col-md-1">
         <img src="assets/images/football-team-imgs/redskins.png" alt="Redskins logo" class="imgSizeRedskins">
       </div>
@@ -362,13 +363,50 @@
     </div>
     <!-- ************** -->
   </div>
+
+
+<!-- tsa ADDED LINES BELOW FOR DISPLAY OF TEAM CLICKED INFO -->
+
+<div class="container contain2" id="contain2" style="display: none;">
+
+  <div class="row" style="margin: 5px 5px 15px;">
+
+    <div class="col-md-3 tsa" id="teamStats" style="border: inset 5px gray; background-color: #3366C1;"> </div>
+    <div class="col-md-3 tsa" id="backToTeams" style="border: inset 5px gray; text-align: center; background-color: #3366C1;"><h1>Back to Teams</h1></div>
+    <div class="col-md-3 tsa" id="map" style="border: inset 5px gray; text-align: center; background-color: #3366C1;">Stadium Image</div>
+    <div class="col-md-3 tsa" id="weather" style="border: inset 5px gray; text-align: center; background-color: #3366C1;">Stadium City Current Weather</div>
+
+  </div>
+
+<div class="row">
+
+      <div class="col-md-12">
+              <table class="table" style="border: 5px inset gray;">
+                  <thead>
+                    <tr>
+                      <th>Player Name</th>
+                      <th>Jersey Number</th>
+                      <th>Height</th>
+                      <th>Weight</th>  
+                      <th>Age</th>              
+                      <th>Rookie Status</th>
+                      <th>Position</th>
+                    </tr>
+                  </thead>
+                  <tbody id="players">
+
+                  </tbody>
+                </table>
+              </div>
+  </div>
+</div>
+
 </body>
-<!-- JQUERY -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <!-- THIS IS FOR THE DROP DOWN MENU -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 <!-- ************************************************************************* -->
-<script type="text/javascript" src="assets/javascript/app.js"></script>
+<script type="text/javascript" src="assets/javascript/nflapp.js"></script>
 
 </html>
