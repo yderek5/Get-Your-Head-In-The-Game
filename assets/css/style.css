@@ -3,6 +3,24 @@ body {
   color: #fff;
 }
 
+tr.odd>.sorting_1  {
+  background-color:#9cb3d0 !important;
+
+}
+
+tr.even>.sorting_1  {
+  background-color:#9cb3d0 !important;
+
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_info {
+  color:white !important;
+}
+
+label {
+  color:white;
+}
+
 p {
   font-size: 18px;
 }

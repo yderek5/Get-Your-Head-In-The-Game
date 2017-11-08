@@ -42,6 +42,8 @@ $(document).ready(function(){
               teamName: result.overallteamstandings.teamstandingsentry[0]["team"]["Name"]
             };
 
+
+
             //console.log(team.teamCity);
             //console.log(team.teamName);
 
@@ -77,35 +79,70 @@ $(document).ready(function(){
             }).done(function(result2) {
 
               var bigRoster = result2.rosterplayers.playerentry;
-
+              var dataSet = [];
+              var name;
+              var jerseyNumber;
+              var height;
+              var weight;
+              var age;
+              var status;
+              var position;
                 for (var i = 0; i < bigRoster.length; i++) {
 
                    if ((bigRoster[i].player.JerseyNumber !== undefined) && (bigRoster[i].player["Position"] !== undefined)) {
-
+                      var thisRow = [];
                       var playerInfo = "<tr>";
                          playerInfo += "<td>" + bigRoster[i].player.FirstName + " " + bigRoster[i].player.LastName + "</td>";
+                         name = bigRoster[i].player.FirstName + ' ' + bigRoster[i].player.LastName;
                          playerInfo += "<td>" + bigRoster[i].player.JerseyNumber + "</td>";
+                         jerseyNumber = bigRoster[i].player.JerseyNumber;
                          playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Height"] + "</td>";
+                         height = result2.rosterplayers.playerentry[i].player["Height"];
                          playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Weight"] + "</td>";
+                         weight = result2.rosterplayers.playerentry[i].player["Weight"];
 
                             if (result2.rosterplayers.playerentry[i].player["Age"] !== undefined) {
                                        playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Age"] + "</td>";
+                                       age = result2.rosterplayers.playerentry[i].player["Age"];
                             } else {
                                        playerInfo += "<td>Not Listed</td>";
+                                       age = 'Not Listed';
                             }
 
                             if (result2.rosterplayers.playerentry[i].player["IsRookie"] !== "false") {
                                        playerInfo += "<td>Veteran</td>";
+                                       status = 'Veteran';
                             } else {
                                        playerInfo += "<td>Rookie</td>";
+                                       status = 'Rookie';
                             }
 
                          playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Position"] + "</td></tr>";
-                         $("tbody").append(playerInfo);
+                         position = result2.rosterplayers.playerentry[i].player["Position"];
+                         //$("tbody").append(playerInfo);
+
+                         thisRow.push(name,jerseyNumber,height,weight,age,status,position); 
+                         dataSet.push(thisRow);
+                         //console.log(thisRow);
+
                    }
                 }
 
-            //debugger
+            //debugger;
+            console.log(dataSet);
+
+            $('#example').DataTable( {
+                data: dataSet,
+                columns: [
+                    { title: "Name" },
+                    { title: "Jersey Number" },
+                    { title: "Height" },
+                    { title: "Weight" },
+                    { title: "Age" },
+                    { title: "Rookie Status" },
+                    { title: "Position" }
+                ]
+            } );
 
             }).fail(function(err) {
                 throw err;
