@@ -6,7 +6,7 @@ var bigRoster = [];
 
 $(document).ready(function(){
 
-  
+
 
      var fromStorage = (localStorage.getItem("nhl-teamname"));
 
@@ -52,14 +52,14 @@ $(document).ready(function(){
                 putStats += "Losses: " + team.gamesLost + "<br>";
                 putStats += "Goals Scored: " + team.pointsScored + "<br>";
                 putStats += "Goals Allowed: " + team.pointsAllowed + "<br>";
-                putStats += "Points: " + team.pointsTotal + "</p>";                
+                putStats += "Points: " + team.pointsTotal + "</p>";
                 console.log(putStats);
-                $("#teamStats").append(putStats); 
+                $("#teamStats").append(putStats);
 //    debugger
 
 
             showMap(team.teamCity + ' ' + team.teamName);
-
+            showWeather(team.teamCity);
             //debugger
 
             }).fail(function(err) {
@@ -114,10 +114,10 @@ $(document).ready(function(){
             console.log($(this).parent().attr('id'));
 
 
-         
+
            $(".contain1").toggle(); //.css("display", "none");
            $(".contain2").toggle(); //.css("display", "inline");
-      }//end IF statement 
+      }//end IF statement
 
 
 
@@ -160,4 +160,18 @@ var showMap = function(teamName) {
             alert('Geocode was not successful for the following reason: ' + status);
           }
         });
+};
+var showWeather = function(teamCity) {
+  //weather API
+  var weatherKey = "&APPID=fbf10f731d36577dc93b21fa47885eab";
+  var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + teamCity + "&units=imperial" + weatherKey;
+  $.ajax({
+    url: weatherURL,
+    method: 'GET',
+  }).done(function(result) {
+    console.log(result);
+    $("#weather").append("<p>" + "Temperature: "+ result.main.temp + "°"+ "F" + "</p>");
+    $("#weather").append("<p>" + result.weather[0].description + "</p>");
+    $("#weather").append("<img src='" + "https://openweathermap.org/img/w/" + result.weather[0].icon + ".png" + "'>" + "</img>");
+  }); //end of weather ajax
 };
