@@ -44,9 +44,6 @@ $(document).ready(function(){
 
 
 
-            //console.log(team.teamCity);
-            //console.log(team.teamName);
-
             var putStats =  "<p>Name: " + team.teamName + "<br>";
                 putStats += "Team Rank: " + team.teamRank + "<br>";
                 putStats += "Games Played: " + team.gamesPlayed + "<br>";
@@ -57,7 +54,7 @@ $(document).ready(function(){
                 putStats += "Points Allowed: " + team.pointsAllowed + "</p>";
                 console.log(putStats);
                 $("#teamStats").append(putStats);
-    //debugger
+
 
 
             showMap(team.teamCity + ' ' + team.teamName);
@@ -91,47 +88,42 @@ $(document).ready(function(){
 
                    if ((bigRoster[i].player.JerseyNumber !== undefined) && (bigRoster[i].player["Position"] !== undefined)) {
                       var thisRow = [];
-                      var playerInfo = "<tr>";
-                         playerInfo += "<td>" + bigRoster[i].player.FirstName + " " + bigRoster[i].player.LastName + "</td>";
-                         name = bigRoster[i].player.FirstName + ' ' + bigRoster[i].player.LastName;
-                         playerInfo += "<td>" + bigRoster[i].player.JerseyNumber + "</td>";
-                         jerseyNumber = bigRoster[i].player.JerseyNumber;
-                         playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Height"] + "</td>";
-                         height = result2.rosterplayers.playerentry[i].player["Height"];
-                         playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Weight"] + "</td>";
-                         weight = result2.rosterplayers.playerentry[i].player["Weight"];
+                   
+                        name = bigRoster[i].player.FirstName + ' ' + bigRoster[i].player.LastName;
+                        jerseyNumber = bigRoster[i].player.JerseyNumber;
+                        height = result2.rosterplayers.playerentry[i].player["Height"];
+                        weight = result2.rosterplayers.playerentry[i].player["Weight"];
+                        age = result2.rosterplayers.playerentry[i].player["Age"];
+                        status = result2.rosterplayers.playerentry[i].player["IsRookie"];
+                        position = result2.rosterplayers.playerentry[i].player["Position"];
+                            if (name == undefined) {
+                              name = 'Not Listed';
+                            } 
 
-                            if (result2.rosterplayers.playerentry[i].player["Age"] !== undefined) {
-                                       playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Age"] + "</td>";
-                                       age = result2.rosterplayers.playerentry[i].player["Age"];
+                            if (height == undefined) {
+                              height = 'Not Listed';
+                            } 
+
+                            if (weight == undefined) {
+                              weight = 'Not Listed';
+                            } 
+
+                            if (age == undefined) {
+                              age = 'Not Listed';
+                            } 
+
+                            if (status !== "false") {
+                              status = 'Rookie';
                             } else {
-                                       playerInfo += "<td>Not Listed</td>";
-                                       age = 'Not Listed';
+                              status = 'Veteran';
                             }
 
-                            if (result2.rosterplayers.playerentry[i].player["IsRookie"] !== "false") {
-                                       playerInfo += "<td>Veteran</td>";
-                                       status = 'Veteran';
-                            } else {
-                                       playerInfo += "<td>Rookie</td>";
-                                       status = 'Rookie';
-                            }
-
-                         playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Position"] + "</td></tr>";
-                         position = result2.rosterplayers.playerentry[i].player["Position"];
-                         //$("tbody").append(playerInfo);
-
-                         thisRow.push(name,jerseyNumber,height,weight,age,status,position); 
-                         dataSet.push(thisRow);
-                         //console.log(thisRow);
-
-                   }
+                        thisRow.push(name,jerseyNumber,height,weight,age,status,position); 
+                        dataSet.push(thisRow);
+                  }
                 }
-
-            //debugger;
             console.log(dataSet);
-
-            table = $('#example').DataTable( {
+            table = $('#player-data').DataTable( {
                 data: dataSet,
                 columns: [
                     { title: "Name" },
@@ -147,12 +139,6 @@ $(document).ready(function(){
             }).fail(function(err) {
                 throw err;
             }); //end of fail
-
-
-
-            console.log($(this).parent().attr('id'));
-
-
 
            $(".contain1").toggle(); //.css("display", "none");
            $(".contain2").toggle(); //.css("display", "inline");
