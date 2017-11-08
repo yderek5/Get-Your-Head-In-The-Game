@@ -2,7 +2,7 @@
 var baseUrl = "https://api.mysportsfeeds.com/v1.1/pull/nfl/2017-regular/overall_team_standings.json?teamstats=W,L,T,PF,PA&team=";
 var rosterUrl = "https://api.mysportsfeeds.com/v1.1/pull/nfl/2017-regular/roster_players.json?fordate=20171101&team=";
 var bigRoster = [];
-
+var table;
 
 $(document).ready(function(){
 
@@ -81,12 +81,12 @@ $(document).ready(function(){
               var bigRoster = result2.rosterplayers.playerentry;
               var dataSet = [];
               var name;
-              var jerseyNumber;
-              var height;
-              var weight;
-              var age;
-              var status;
-              var position;
+              var jerseyNumber = '';
+              var height = '';
+              var weight = '';
+              var age= '';
+              var status = '';
+              var position = '';
                 for (var i = 0; i < bigRoster.length; i++) {
 
                    if ((bigRoster[i].player.JerseyNumber !== undefined) && (bigRoster[i].player["Position"] !== undefined)) {
@@ -131,7 +131,7 @@ $(document).ready(function(){
             //debugger;
             console.log(dataSet);
 
-            $('#example').DataTable( {
+            table = $('#example').DataTable( {
                 data: dataSet,
                 columns: [
                     { title: "Name" },
@@ -164,6 +164,7 @@ $(document).ready(function(){
     $(".contain1").toggle(); //.css("display", "none");
     $(".contain2").toggle(); //.css("display", "inline");
     $("#weather").empty();
+    table.destroy();
 
   });
 });//endof document.ready
