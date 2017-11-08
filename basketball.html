@@ -8,14 +8,326 @@
   <!-- Reset CSS -->
   <link rel="stylesheet" href="assets/css/reset.css">
   <!-- Bootstrap CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <!-- Style CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADmrqNNdZqhI7jfWguW-nj75hepeXasAA&libraries=places"></script>
   <title>GYHITG | Basketball Teams</title>
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">GYHITG</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Change League
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="baseball.html">Baseball</a>
+            <a class="dropdown-item" href="football.html">Football</a>
+            <a class="dropdown-item" href="hockey.html">Hockey</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <h1 class="text-center topText">Pick Your Favorite Team</h1>
+  <div class="container margin contain1" id="contain1">
+    <!-- TODO: Add all teams in alphabetical order -->
+    <!-- Team -->
+    <div class="row" data-search="ATL">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/atlHawks.png" alt="Atlanta Hawks logo" class="imgSizeatlHawks">
+      </div>
+      <div class="col-md-11">
+        <h1 class="atlHawks">Atlanta Hawks</h1>
+      </div>
+    </div>
+    <div class="row" data-search="BOS">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/celtics.png" alt="Boston Celtics logo" class="imgSizeceltics">
+      </div>
+      <div class="col-md-11">
+        <h1 class="celtics">Boston Celtics</h1>
+      </div>
+    </div>
+    <div class="row" data-search="BRO">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/bNets.png" alt="Brooklyn Nets logo" class="imgSizebNets">
+      </div>
+      <div class="col-md-11">
+        <h1 class="bNets">Brooklyn Nets</h1>
+      </div>
+    </div>
+    <div class="row" data-search="CHA">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/charHornets.png" alt="Charlotte Hornets logo" class="imgSizecharHornets">
+      </div>
+      <div class="col-md-11">
+        <h1 class="charHornets">Charlotte Hornets</h1>
+      </div>
+    </div>
+    <div class="row" data-search="CHI">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/Bulls.png" alt="Charlotte Hornets logo" class="imgSizeBulls">
+      </div>
+      <div class="col-md-11">
+        <h1 class="Bulls">Chicago Bulls</h1>
+      </div>
+    </div>
+    <div class="row" data-search="CLE">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/Cavs.png" alt="Cleveland Cavaliers log0" class="imgSizeCavs">
+      </div>
+      <div class="col-md-11">
+        <h1 class="Cavs">Cleveland Cavaliers</h1>
+      </div>
+    </div>
+    <div class="row" data-search="DAL">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/mavs.png" alt="Dallas Maverics log0" class="imgSizemavs">
+      </div>
+      <div class="col-md-11">
+        <h1 class="mavs">Dallas Mavericks</h1>
+      </div>
+    </div>
+    <div class="row" data-search="DEN">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/nugs.png" alt="Denver Nuggets log0" class="imgSizenugs">
+      </div>
+      <div class="col-md-11">
+        <h1 class="nugs">Denver Nuggets</h1>
+      </div>
+    </div>
+    <div class="row" data-search="DET">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/pists.png" alt="Detroit Pistons log0" class="imgSizepists">
+      </div>
+      <div class="col-md-11">
+        <h1 class="pists">Detroit Pistons</h1>
+      </div>
+    </div>
+    <div class="row" data-search="GSW">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/Golden.png" alt="Golden State Warriors log0" class="imgSizeGolden">
+      </div>
+      <div class="col-md-11">
+        <h1 class="Golden">Golden State Warriors</h1>
+      </div>
+    </div>
+    <div class="row" data-search="HOU">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/rockets.png" alt="Houston Rockets log0" class="imgSizerockets">
+      </div>
+      <div class="col-md-11">
+        <h1 class="rockets">Houston Rockets</h1>
+      </div>
+    </div>
+    <div class="row" data-search="IND">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/pacers.png" alt="Indiana Pacers log0" class="imgSizepacers">
+      </div>
+      <div class="col-md-11">
+        <h1 class="pacers"> Indiana Pacers</h1>
+      </div>
+    </div>
+    <div class="row" data-search="LAC">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/Clippers.png" alt="LA Clippers log0" class="imgSizeClippers">
+      </div>
+      <div class="col-md-11">
+        <h1 class="Clippers">LA Clippers</h1>
+      </div>
+    </div>
+    <div class="row" data-search="LAL">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/lakers.png" alt="Los Angelos Lakers logo" class="imgSizelakers">
+      </div>
+      <div class="col-md-11">
+        <h1 class="lakers">Los Angelos Lakers</h1>
+      </div>
+    </div>
+    <div class="row" data-search="MEM">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/grizzles.png" alt="Memphis Grizzles logo" class="imgSizegizzles">
+      </div>
+      <div class="col-md-11">
+        <h1 class="grizzles">Memphis Grizzles</h1>
+      </div>
+    </div>
+    <div class="row" data-search="MIA">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/heat.png" alt="Miami Heat logo" class="imgSizeheat">
+      </div>
+      <div class="col-md-11">
+        <h1 class="heat">Miami Heat</h1>
+      </div>
+    </div>
+    <div class="row" data-search="MIL">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/bucks.png" alt="Milwaukee Bucks logo" class="imgSizebucks">
+      </div>
+      <div class="col-md-11">
+        <h1 class="bucks">Milwaukee Bucks</h1>
+      </div>
+    </div>
+    <div class="row" data-search="MIN">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/timberwolves.png" alt="Minnesota Timberwolves logo" class="imgSizetimberwolves">
+      </div>
+      <div class="col-md-11">
+        <h1 class="timberwolves">Minnesota Timberwolves</h1>
+      </div>
+    </div>
+    <div class="row" data-search="NOP">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/pelicans.png" alt="New Orleands Pelicans logo" class="imgSizepelicans">
+      </div>
+      <div class="col-md-11">
+        <h1 class="pelicans">New Orleans Pelicans</h1>
+      </div>
+    </div>
+    <div class="row" data-search="NYK">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/knicks.png" alt="New York Knicks logo" class="imgSizeknicks">
+      </div>
+      <div class="col-md-11">
+        <h1 class="knicks">New York Knicks</h1>
+      </div>
+    </div>
+    <div class="row" data-search="OKL">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/thunder.png" alt="Oklahoma City Thunder logo" class="imgSizethunder">
+      </div>
+      <div class="col-md-11">
+        <h1 class="thunder">Oklahoma City Thunder</h1>
+      </div>
+    </div>
+    <div class="row" data-search="ORL">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/magic.png" alt="Orlando Magic logo" class="imgSizemagic">
+      </div>
+      <div class="col-md-11">
+        <h1 class="magic">Orlando Magic</h1>
+      </div>
+    </div>
+    <div class="row" data-search="PHI">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/76ers.png" alt="Philadelphia 76ers logo" class="imgSize76ers">
+      </div>
+      <div class="col-md-11">
+        <h1 class="sevensix">Philadelphia 76ers</h1>
+      </div>
+    </div>
+    <div class="row" data-search="PHX">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/suns.png" alt="Phoenix Suns logo" class="imgSizesuns">
+      </div>
+      <div class="col-md-11">
+        <h1 class="suns">Phoenix Suns</h1>
+      </div>
+    </div>
+    <div class="row" data-search="POR">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/blazers.png" alt="Portland Blazers logo" class="imgSizeblazers">
+      </div>
+      <div class="col-md-11">
+        <h1 class="blazers">Portland Trial Blazers</h1>
+      </div>
+    </div>
+    <div class="row" data-search="SAC">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/kings.png" alt="Sacramento Kings logo" class="imgSizekings">
+      </div>
+      <div class="col-md-11">
+        <h1 class="kings">Sacramento Kings</h1>
+      </div>
+    </div>
+    <div class="row" data-search="SAS">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/spurs.png" alt="San Antonio Spurs logo" class="imgSizespurs">
+      </div>
+      <div class="col-md-11">
+        <h1 class="spurs">San Antonio Spurs</h1>
+      </div>
+    </div>
+    <div class="row" data-search="TOR">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/raptors.png" alt="Toronto Raptors logo" class="imgSizeraptors">
+      </div>
+      <div class="col-md-11">
+        <h1 class="raptors">Toronto Raptors</h1>
+      </div>
+    </div>
+    <div class="row" data-search="UTA">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/jazz.png" alt="Utah Jazz logo" class="imgSizejazz">
+      </div>
+      <div class="col-md-11">
+        <h1 class="jazz">Utah Jazz</h1>
+      </div>
+    </div>
+    <div class="row" data-search="WAS">
+      <div class="col-md-1">
+        <img src="assets/images/basketball-team-imgs/wizards.png" alt="Washington Wizards logo" class="imgSizewizards">
+      </div>
+      <div class="col-md-11">
+        <h1 class="wizards">Washington Wizards</h1>
+      </div>
+    </div>
+  </div>
+
+<!-- tsa ADDED LINES BELOW FOR DISPLAY OF TEAM CLICKED INFO -->
+
+<div class="container contain2" id="contain2" style="display: none;">
+
+  <div class="row" style="margin: 5px 5px 15px;">
+
+    <div class="col-md-4 tsa" id="teamStats" style="border: inset 5px gray; background-color: #3366C1;"> </div>
+    <div class="col-md-4 tsa" id="backToTeams" style="border: inset 5px gray; text-align: center; background-color: #3366C1;"><h1>Back to Teams</h1></div>
+    <div class="col-md-4 tsa" id="map" style="border: inset 5px gray; text-align: center; background-color: #3366C1;">Stadium Image</div>
+
+  </div>
+
+<div class="row">
+
+      <div class="col-md-12">
+              <table class="table" style="border: 5px inset gray;">
+                  <thead>
+                    <tr>
+                      <th>Player Name</th>
+                      <th>Jersey Number</th>
+                      <th>Height</th>
+                      <th>Weight</th>  
+                      <th>Age</th>              
+                      <th>Rookie Status</th>
+                      <th>Position</th>
+                    </tr>
+                  </thead>
+                  <tbody id="players">
+                   
+                  </tbody>
+                </table>
+             </div>
+  </div>
+</div>
+
+
 
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!-- THIS IS FOR THE DROP DOWN MENU -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<!-- ************************************************************************* -->
+<script type="text/javascript" src="assets/javascript/nbaapp.js"></script>
 
 </html>
