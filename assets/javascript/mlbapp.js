@@ -2,7 +2,7 @@
 var baseUrl = "https://api.mysportsfeeds.com/v1.1/pull/mlb/2017-regular/overall_team_standings.json?teamstats=W,L,RF,RA&team=";
 var rosterUrl = "https://api.mysportsfeeds.com/v1.1/pull/mlb/2017-regular/roster_players.json?fordate=20171101&team=";
 var bigRoster = [];
-
+var table;
 
 $(document).ready(function(){
 
@@ -73,35 +73,64 @@ $(document).ready(function(){
             }).done(function(result2) {
 
               var bigRoster = result2.rosterplayers.playerentry;
+              var dataSet = [];
+              var name;
+              var jerseyNumber = '';
+              var height = '';
+              var weight = '';
+              var age= '';
+              var status = '';
+              var position = '';
 
                 for (var i = 0; i < bigRoster.length; i++) {
 
                    if ((bigRoster[i].player.JerseyNumber !== undefined) && (bigRoster[i].player["Position"] !== undefined)) {
+                      var thisRow = [];
+                      name = bigRoster[i].player.FirstName + ' ' + bigRoster[i].player.LastName;
+                        jerseyNumber = bigRoster[i].player.JerseyNumber;
+                        height = result2.rosterplayers.playerentry[i].player["Height"];
+                        weight = result2.rosterplayers.playerentry[i].player["Weight"];
+                        age = result2.rosterplayers.playerentry[i].player["Age"];
+                        status = result2.rosterplayers.playerentry[i].player["IsRookie"];
+                        position = result2.rosterplayers.playerentry[i].player["Position"];
+                            if (name == undefined) {
+                              name = 'Not Listed';
+                            } 
 
-                      var playerInfo = "<tr>";
-                         playerInfo += "<td>" + bigRoster[i].player.FirstName + " " + bigRoster[i].player.LastName + "</td>";
-                         playerInfo += "<td>" + bigRoster[i].player.JerseyNumber + "</td>";
-                         playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Height"] + "</td>";
-                         playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Weight"] + "</td>";
+                            if (height == undefined) {
+                              height = 'Not Listed';
+                            } 
 
-                            if (result2.rosterplayers.playerentry[i].player["Age"] !== undefined) {
-                                       playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Age"] + "</td>";
+                            if (weight == undefined) {
+                              weight = 'Not Listed';
+                            } 
+
+                            if (age == undefined) {
+                              age = 'Not Listed';
+                            } 
+
+                            if (status !== "false") {
+                              status = 'Rookie';
                             } else {
-                                       playerInfo += "<td>Not Listed</td>";
+                              status = 'Veteran';
                             }
-
-                            if (result2.rosterplayers.playerentry[i].player["IsRookie"] !== "false") {
-                                       playerInfo += "<td>Veteran</td>";
-                            } else {
-                                       playerInfo += "<td>Rookie</td>";
-                            }
-
-                         playerInfo += "<td>" + result2.rosterplayers.playerentry[i].player["Position"] + "</td></tr>";
-                         $("tbody").append(playerInfo);
-                   }
+                        thisRow.push(name,jerseyNumber,height,weight,age,status,position); 
+                        dataSet.push(thisRow);
+                  }
                 }
 
-            //debugger
+                table = $('#player-data').DataTable( {
+                data: dataSet,
+                columns: [
+                    { title: "Name" },
+                    { title: "Jersey Number" },
+                    { title: "Height" },
+                    { title: "Weight" },
+                    { title: "Age" },
+                    { title: "Rookie Status" },
+                    { title: "Position" }
+                  ]
+                });
 
             }).fail(function(err) {
                 throw err;
@@ -125,6 +154,7 @@ $(document).ready(function(){
     $(".contain1").toggle(); //.css("display", "none");
     $(".contain2").toggle(); //.css("display", "inline");
     $("#weather").empty();
+    table.destroy();
   });
 });//endof document.ready
 
