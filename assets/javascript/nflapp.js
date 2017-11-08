@@ -165,7 +165,7 @@ var showMap = function(teamName) {
 var showWeather = function(teamCity) {
   //weather API
   var weatherKey = "&APPID=fbf10f731d36577dc93b21fa47885eab";
-  var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + teamCity + "&units=imperial" + weatherKey;
+  var weatherURL = "http://api.openweathermap.org/data/2.5/weather?q=" + teamCity + "&units=imperial" + weatherKey;
   $.ajax({
     url: weatherURL,
     method: 'GET',
