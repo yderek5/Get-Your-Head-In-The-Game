@@ -126,8 +126,8 @@ $(document).ready(function(){
   $("#backToTeams").on("click", function(event){
     $(".contain1").toggle(); //.css("display", "none");
     $(".contain2").toggle(); //.css("display", "inline");
-
-  })
+    $("#weather").empty();
+  });
 });//endof document.ready
 
 
