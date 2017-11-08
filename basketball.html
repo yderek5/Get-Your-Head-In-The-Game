@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <!-- Style CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADmrqNNdZqhI7jfWguW-nj75hepeXasAA&libraries=places"></script>
   <title>GYHITG | Basketball Teams</title>
 </head>
 
@@ -39,7 +40,7 @@
     </div>
   </nav>
   <h1 class="text-center topText">Pick Your Favorite Team</h1>
-  <div class="container margin">
+  <div class="container margin contain1" id="contain1">
     <!-- TODO: Add all teams in alphabetical order -->
     <!-- Team -->
     <div class="row" data-search="ATL">
@@ -282,8 +283,42 @@
         <h1 class="wizards">Washington Wizards</h1>
       </div>
     </div>
+  </div>
 
+<!-- tsa ADDED LINES BELOW FOR DISPLAY OF TEAM CLICKED INFO -->
 
+<div class="container contain2" id="contain2" style="display: none;">
+
+  <div class="row" style="margin: 5px 5px 15px;">
+
+    <div class="col-md-4 tsa" id="teamStats" style="border: inset 5px gray; background-color: #3366C1;"> </div>
+    <div class="col-md-4 tsa" id="backToTeams" style="border: inset 5px gray; text-align: center; background-color: #3366C1;"><h1>Back to Teams</h1></div>
+    <div class="col-md-4 tsa" id="map" style="border: inset 5px gray; text-align: center; background-color: #3366C1;">Stadium Image</div>
+
+  </div>
+
+<div class="row">
+
+      <div class="col-md-12">
+              <table class="table" style="border: 5px inset gray;">
+                  <thead>
+                    <tr>
+                      <th>Player Name</th>
+                      <th>Jersey Number</th>
+                      <th>Height</th>
+                      <th>Weight</th>  
+                      <th>Age</th>              
+                      <th>Rookie Status</th>
+                      <th>Position</th>
+                    </tr>
+                  </thead>
+                  <tbody id="players">
+                   
+                  </tbody>
+                </table>
+             </div>
+  </div>
+</div>
 
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
