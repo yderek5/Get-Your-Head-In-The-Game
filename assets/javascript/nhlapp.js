@@ -1,13 +1,14 @@
 
-var baseUrl = "https://api.mysportsfeeds.com/v1.1/pull/nfl/2017-regular/overall_team_standings.json?teamstats=W,L,T,PF,PA&team=";
-var rosterUrl = "https://api.mysportsfeeds.com/v1.1/pull/nfl/2017-regular/roster_players.json?fordate=20171101&team=";
+var baseUrl = "https://api.mysportsfeeds.com/v1.1/pull/nhl/2017-regular/overall_team_standings.json?teamstats=W,L,GF,GA,Pts&team=";
+var rosterUrl = "https://api.mysportsfeeds.com/v1.1/pull/nhl/2017-regular/roster_players.json?fordate=20171101&team=";
 var bigRoster = [];
 
 
 $(document).ready(function(){
 
+  
 
-     var fromStorage = (localStorage.getItem("nfl-teamname"));
+     var fromStorage = (localStorage.getItem("nhl-teamname"));
 
       $(".row").on("click", function(event){
 
@@ -19,7 +20,7 @@ $(document).ready(function(){
         $("#teamStats").empty();
         $("#players").empty();
 
-        localStorage.setItem("nfl-teamname", $(this).attr("data-search")); //key and value
+        localStorage.setItem("nhl-teamname", $(this).attr("data-search")); //key and value
 
            $.ajax({
             url: newBaseUrl,
@@ -32,11 +33,11 @@ $(document).ready(function(){
               var team = {
               teamRank: result.overallteamstandings.teamstandingsentry[0].rank,
               gamesPlayed: result.overallteamstandings.teamstandingsentry[0].stats["GamesPlayed"]["#text"],
-              gamesWon: result.overallteamstandings.teamstandingsentry[0].stats["Wins"]["#text"],
-              gamesLost: result.overallteamstandings.teamstandingsentry[0].stats["Losses"]["#text"],
-              gamesTied: result.overallteamstandings.teamstandingsentry[0].stats["Ties"]["#text"],
-              pointsScored: result.overallteamstandings.teamstandingsentry[0].stats["PointsFor"]["#text"],
-              pointsAllowed: result.overallteamstandings.teamstandingsentry[0].stats["PointsAgainst"]["#text"],
+              gamesWon: result.overallteamstandings.teamstandingsentry[0].stats.stats["Wins"]["#text"],
+              gamesLost: result.overallteamstandings.teamstandingsentry[0].stats.stats["Losses"]["#text"],
+              pointsScored: result.overallteamstandings.teamstandingsentry[0].stats.stats["GoalsFor"]["#text"],
+              pointsAllowed: result.overallteamstandings.teamstandingsentry[0].stats.stats["GoalsAgainst"]["#text"],
+              pointsTotal: result.overallteamstandings.teamstandingsentry[0].stats.stats["Points"]["#text"],
               teamCity: result.overallteamstandings.teamstandingsentry[0]["team"]["City"],
               teamName: result.overallteamstandings.teamstandingsentry[0]["team"]["Name"]
             };
@@ -49,17 +50,15 @@ $(document).ready(function(){
                 putStats += "Games Played: " + team.gamesPlayed + "<br>";
                 putStats += "Wins: " + team.gamesWon + "<br>";
                 putStats += "Losses: " + team.gamesLost + "<br>";
-                putStats += "Ties: " + team.gamesTied + "<br>";
-                putStats += "Points Scored: " + team.pointsScored + "<br>";
-                putStats += "Points Allowed: " + team.pointsAllowed + "</p>";
+                putStats += "Goals Scored: " + team.pointsScored + "<br>";
+                putStats += "Goals Allowed: " + team.pointsAllowed + "<br>";
+                putStats += "Points: " + team.pointsTotal + "</p>";                
                 console.log(putStats);
-                $("#teamStats").append(putStats);
-    //debugger
+                $("#teamStats").append(putStats); 
+//    debugger
 
 
             showMap(team.teamCity + ' ' + team.teamName);
-
-            showWeather(team.teamCity);
 
             //debugger
 
@@ -115,10 +114,11 @@ $(document).ready(function(){
             console.log($(this).parent().attr('id'));
 
 
-
+         
            $(".contain1").toggle(); //.css("display", "none");
            $(".contain2").toggle(); //.css("display", "inline");
-      }//end IF statement
+      }//end IF statement 
+
 
 
   }); //end of onclick
@@ -126,8 +126,6 @@ $(document).ready(function(){
   $("#backToTeams").on("click", function(event){
     $(".contain1").toggle(); //.css("display", "none");
     $(".contain2").toggle(); //.css("display", "inline");
-    $("#weather").empty();
- });
 
   })
 });//endof document.ready
@@ -163,19 +161,3 @@ var showMap = function(teamName) {
           }
         });
 };
-
-var showWeather = function(teamCity) {
-  //weather API
-  var weatherKey = "&APPID=fbf10f731d36577dc93b21fa47885eab";
-  var weatherURL = "http://api.openweathermap.org/data/2.5/weather?q=" + teamCity + "&units=imperial" + weatherKey;
-  $.ajax({
-    url: weatherURL,
-    method: 'GET',
-  }).done(function(result) {
-    console.log(result);
-    $("#weather").append("<p>" + "Temperature: "+ result.main.temp + "°"+ "F" + "</p>");
-    $("#weather").append("<p>" + result.weather[0].description + "</p>");
-    $("#weather").append("<img src='" + "http://openweathermap.org/img/w/" + result.weather[0].icon + ".png" + "'>" + "</img>");
-  }); //end of weather ajax
-};
-
