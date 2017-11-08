@@ -173,6 +173,6 @@ var showWeather = function(teamCity) {
     console.log(result);
     $("#weather").append("<p>" + "Temperature: "+ result.main.temp + "°"+ "F" + "</p>");
     $("#weather").append("<p>" + result.weather[0].description + "</p>");
-    $("#weather").append("<img src='" + "http://openweathermap.org/img/w/" + result.weather[0].icon + ".png" + "'>" + "</img>");
+    $("#weather").append("<img src='" + "https://openweathermap.org/img/w/" + result.weather[0].icon + ".png" + "'>" + "</img>");
   }); //end of weather ajax
 };
