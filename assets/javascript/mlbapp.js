@@ -6,6 +6,7 @@ var table;
 
 $(document).ready(function(){
 
+  $("img").addClass("img-responsive");
 
 
      var fromStorage = (localStorage.getItem("mlb-teamname"));

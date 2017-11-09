@@ -6,7 +6,7 @@ var table;
 
 $(document).ready(function(){
 
-
+      $("img").addClass("img-responsive");
 
      var fromStorage = (localStorage.getItem("nfl-teamname"));
 
@@ -117,6 +117,7 @@ $(document).ready(function(){
                             } else {
                               status = 'Veteran';
                             }
+
 
                         thisRow.push(name,jerseyNumber,height,weight,age,status,position); 
                         dataSet.push(thisRow);
