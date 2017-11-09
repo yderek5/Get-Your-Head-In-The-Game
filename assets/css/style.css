@@ -3,6 +3,12 @@ body {
   color: #fff;
 }
 
+.tsaborder {
+  border: inset 5px gray;
+  text-align: center;
+  background-color: #3366C1;
+}
+
 tr.odd>.sorting_1  {
   background-color:#9cb3d0 !important;
 

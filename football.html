@@ -5,22 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- Reset CSS -->
-  <link rel="stylesheet" href="assets/css/reset.css">
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.css">
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> -->
   <!-- Style CSS -->
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-
   <link rel="stylesheet" href="assets/css/style.css">
-  
-
-  
-  
-  
-
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADmrqNNdZqhI7jfWguW-nj75hepeXasAA&libraries=places"></script>
+
   <title>GYHITG | Football Teams</title>
 </head>
 
@@ -374,42 +367,48 @@
   </div>
 
 
-<!-- tsa ADDED LINES BELOW FOR DISPLAY OF TEAM CLICKED INFO -->
+  <!-- tsa ADDED LINES BELOW FOR DISPLAY OF TEAM CLICKED INFO -->
+  <div class="container contain2" id="contain2" style="display: none;">
 
-<div class="container contain2" id="contain2" style="display: none;">
+    <div class="row" style="margin: 5px 5px 15px;">
+      
+      <div class="col-md-3 tsaborder" id="backToTeams">
+        <h1>Back to Teams</h1>
+        <br><img src="assets/images/back_arrow.png" class="img-responsive" height="100" alt="Back to teams">
+      </div>
+      
+      <div class="col-md-3 tsaborder" id="teamStats"> 
+      </div>
 
-  <div class="row" style="margin: 5px 5px 15px;">
+      <div class="col-md-3 tsaborder" id="map">
+      </div>
 
-    <div class="col-md-3 tsa" id="backToTeams" style="border: inset 5px gray; text-align: center; background-color: #3366C1;"><h1>Back to Teams</h1><br><img src="assets/images/back_arrow.png" class="img-responsive" height="100px"></div>
-    <div class="col-md-3 tsa" id="teamStats" style="border: inset 5px gray; background-color: #3366C1;"> </div>
-    <div class="col-md-3 tsa" id="map" style="border: inset 5px gray; text-align: center; background-color: #3366C1;">Stadium Image</div>
-    <div class="col-md-3 tsa" id="weather" style="border: inset 5px gray; text-align: center; background-color: #3366C1;">Stadium City Current Weather</div>
+      <div class="col-md-3 tsaborder" id="weather">
+        Stadium City Current Weather
+      </div>
 
-  </div>
+    </div>
 
-<div class="row">
+    <div class="row">
 
       <div class="col-md-12">
-           
-                <table id="player-data" class="display" width="100%"></table>
-
-              </div>
+       <table id="player-data" class="display"></table>
+      </div>
+  
+    </div>
+  
   </div>
-</div>
-
-</body>
 
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 
-
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
 <!-- THIS IS FOR THE DROP DOWN MENU -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 <!-- ************************************************************************* -->
-<script type="text/javascript" src="assets/javascript/nflapp.js"></script>
 
+<script type="text/javascript" src="assets/javascript/nflapp.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
+</body>
 
 </html>
