@@ -6,7 +6,7 @@ var bigRoster = [];
 
 $(document).ready(function(){
 
-
+      $("img").addClass("img-responsive");
 
      var fromStorage = (localStorage.getItem("nfl-teamname"));
 
@@ -121,7 +121,7 @@ $(document).ready(function(){
                          position = result2.rosterplayers.playerentry[i].player["Position"];
                          //$("tbody").append(playerInfo);
 
-                         thisRow.push(name,jerseyNumber,height,weight,age,status,position); 
+                         thisRow.push(name,jerseyNumber,height,weight,age,status,position);
                          dataSet.push(thisRow);
                          //console.log(thisRow);
 

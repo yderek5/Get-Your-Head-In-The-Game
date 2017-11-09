@@ -6,6 +6,7 @@ var bigRoster = [];
 
 $(document).ready(function(){
 
+  $("img").addClass("img-responsive");
 
 
      var fromStorage = (localStorage.getItem("nba-teamname"));
