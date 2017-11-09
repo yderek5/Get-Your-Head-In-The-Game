@@ -8,7 +8,6 @@ $(document).ready(function(){
 
   $("img").addClass("img-responsive");
 
-
      var fromStorage = (localStorage.getItem("nhl-teamname"));
 
       $(".row").on("click", function(event){
@@ -43,9 +42,6 @@ $(document).ready(function(){
               teamName: result.overallteamstandings.teamstandingsentry[0]["team"]["Name"]
             };
 
-            //console.log(team.teamCity);
-            //console.log(team.teamName);
-
             var putStats =  "<p>Name: " + team.teamName + "<br>";
                 putStats += "Team Rank: " + team.teamRank + "<br>";
                 putStats += "Games Played: " + team.gamesPlayed + "<br>";
@@ -54,14 +50,10 @@ $(document).ready(function(){
                 putStats += "Goals Scored: " + team.pointsScored + "<br>";
                 putStats += "Goals Allowed: " + team.pointsAllowed + "<br>";
                 putStats += "Points: " + team.pointsTotal + "</p>";
-                console.log(putStats);
                 $("#teamStats").append(putStats);
-//    debugger
 
-
-            showMap(team.teamCity + ' ' + team.teamName);
-            showWeather(team.teamCity);
-            //debugger
+                  showMap(team.teamCity + ' ' + team.teamName);
+                  showWeather(team.teamCity);
 
             }).fail(function(err) {
                 throw err;
@@ -90,7 +82,8 @@ $(document).ready(function(){
 
                    if ((bigRoster[i].player.JerseyNumber !== undefined) && (bigRoster[i].player["Position"] !== undefined)) {
                       var thisRow = [];
-                      name = bigRoster[i].player.FirstName + ' ' + bigRoster[i].player.LastName;
+
+                        name = bigRoster[i].player.FirstName + ' ' + bigRoster[i].player.LastName;
                         jerseyNumber = bigRoster[i].player.JerseyNumber;
                         height = result2.rosterplayers.playerentry[i].player["Height"];
                         weight = result2.rosterplayers.playerentry[i].player["Weight"];
@@ -123,8 +116,7 @@ $(document).ready(function(){
                         dataSet.push(thisRow);
                   }
                 }
-                console.log(dataSet);
-                table = $('#player-data').DataTable( {
+              table = $('#player-data').DataTable( {
                 data: dataSet,
                 columns: [
                     { title: "Name" },
@@ -141,17 +133,9 @@ $(document).ready(function(){
                 throw err;
             }); //end of fail
 
-
-
-            console.log($(this).parent().attr('id'));
-
-
-
            $(".contain1").toggle(); //.css("display", "none");
            $(".contain2").toggle(); //.css("display", "inline");
       }//end IF statement
-
-
 
   }); //end of onclick
 
@@ -160,9 +144,9 @@ $(document).ready(function(){
     $(".contain2").toggle(); //.css("display", "inline");
     $("#weather").empty();
     table.destroy();
+
   });
 });//endof document.ready
-
 
 var showMap = function(teamName) {
 
@@ -174,10 +158,8 @@ var showMap = function(teamName) {
       var test;
       var mapCenter;
       $("#map").addClass('mapHeight');
-      //console.log(address);
         geocoder = new google.maps.Geocoder();
          geocoder.geocode( { 'address': address}, function(results, status) {
-          //console.log(status);
           if (status == 'OK') {
             mapCenter = results[0].geometry.location;
             map = new google.maps.Map(document.getElementById('map'), {
@@ -194,15 +176,14 @@ var showMap = function(teamName) {
           }
         });
 };
+
 var showWeather = function(teamCity) {
-  //weather API
   var weatherKey = "&APPID=fbf10f731d36577dc93b21fa47885eab";
   var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + teamCity + "&units=imperial" + weatherKey;
   $.ajax({
     url: weatherURL,
     method: 'GET',
   }).done(function(result) {
-    console.log(result);
     $("#weather").append("<p>" + "Temperature: "+ result.main.temp + "°"+ "F" + "</p>");
     $("#weather").append("<p>" + result.weather[0].description + "</p>");
     $("#weather").append("<img src='" + "https://openweathermap.org/img/w/" + result.weather[0].icon + ".png" + "'>" + "</img>");

@@ -6,7 +6,7 @@ var table;
 
 $(document).ready(function(){
 
-      $("img").addClass("img-responsive");
+  $("img").addClass("img-responsive");
 
      var fromStorage = (localStorage.getItem("nfl-teamname"));
 
@@ -42,8 +42,6 @@ $(document).ready(function(){
               teamName: result.overallteamstandings.teamstandingsentry[0]["team"]["Name"]
             };
 
-
-
             var putStats =  "<p>Name: " + team.teamName + "<br>";
                 putStats += "Team Rank: " + team.teamRank + "<br>";
                 putStats += "Games Played: " + team.gamesPlayed + "<br>";
@@ -52,16 +50,10 @@ $(document).ready(function(){
                 putStats += "Ties: " + team.gamesTied + "<br>";
                 putStats += "Points Scored: " + team.pointsScored + "<br>";
                 putStats += "Points Allowed: " + team.pointsAllowed + "</p>";
-                console.log(putStats);
                 $("#teamStats").append(putStats);
 
-
-
-            showMap(team.teamCity + ' ' + team.teamName);
-
-            showWeather(team.teamCity);
-
-            //debugger
+                  showMap(team.teamCity + ' ' + team.teamName);
+                  showWeather(team.teamCity);
 
             }).fail(function(err) {
                 throw err;
@@ -84,6 +76,7 @@ $(document).ready(function(){
               var age= '';
               var status = '';
               var position = '';
+
                 for (var i = 0; i < bigRoster.length; i++) {
 
                    if ((bigRoster[i].player.JerseyNumber !== undefined) && (bigRoster[i].player["Position"] !== undefined)) {
@@ -118,13 +111,12 @@ $(document).ready(function(){
                               status = 'Veteran';
                             }
 
-
                         thisRow.push(name,jerseyNumber,height,weight,age,status,position); 
                         dataSet.push(thisRow);
                   }
                 }
-            console.log(dataSet);
-            table = $('#player-data').DataTable( {
+
+              table = $('#player-data').DataTable( {
                 data: dataSet,
                 columns: [
                     { title: "Name" },
@@ -134,8 +126,8 @@ $(document).ready(function(){
                     { title: "Age" },
                     { title: "Rookie Status" },
                     { title: "Position" }
-                ]
-            } );
+                  ]
+              } );
 
             }).fail(function(err) {
                 throw err;
@@ -166,10 +158,8 @@ var showMap = function(teamName) {
       var test;
       var mapCenter;
       $("#map").addClass('mapHeight');
-      //console.log(address);
         geocoder = new google.maps.Geocoder();
          geocoder.geocode( { 'address': address}, function(results, status) {
-          //console.log(status);
           if (status == 'OK') {
             mapCenter = results[0].geometry.location;
             map = new google.maps.Map(document.getElementById('map'), {
@@ -188,14 +178,12 @@ var showMap = function(teamName) {
 };
 
 var showWeather = function(teamCity) {
-  //weather API
   var weatherKey = "&APPID=fbf10f731d36577dc93b21fa47885eab";
   var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + teamCity + "&units=imperial" + weatherKey;
   $.ajax({
     url: weatherURL,
     method: 'GET',
   }).done(function(result) {
-    console.log(result);
     $("#weather").append("<p>" + "Temperature: "+ result.main.temp + "°"+ "F" + "</p>");
     $("#weather").append("<p>" + result.weather[0].description + "</p>");
     $("#weather").append("<img src='" + "https://openweathermap.org/img/w/" + result.weather[0].icon + ".png" + "'>" + "</img>");
