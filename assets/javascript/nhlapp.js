@@ -92,19 +92,19 @@ $(document).ready(function(){
                         position = result2.rosterplayers.playerentry[i].player["Position"];
                             if (name == undefined) {
                               name = 'Not Listed';
-                            } 
+                            }
 
                             if (height == undefined) {
                               height = 'Not Listed';
-                            } 
+                            }
 
                             if (weight == undefined) {
                               weight = 'Not Listed';
-                            } 
+                            }
 
                             if (age == undefined) {
                               age = 'Not Listed';
-                            } 
+                            }
 
                             if (status !== "false") {
                               status = 'Rookie';
@@ -112,7 +112,7 @@ $(document).ready(function(){
                               status = 'Veteran';
                             }
 
-                        thisRow.push(name,jerseyNumber,height,weight,age,status,position); 
+                        thisRow.push(name,jerseyNumber,height,weight,age,status,position);
                         dataSet.push(thisRow);
                   }
                 }
@@ -184,6 +184,7 @@ var showWeather = function(teamCity) {
     url: weatherURL,
     method: 'GET',
   }).done(function(result) {
+    $("#weather").append("Stadium City Current Weather");
     $("#weather").append("<p>" + "Temperature: "+ result.main.temp + "°"+ "F" + "</p>");
     $("#weather").append("<p>" + result.weather[0].description + "</p>");
     $("#weather").append("<img src='" + "https://openweathermap.org/img/w/" + result.weather[0].icon + ".png" + "'>" + "</img>");
